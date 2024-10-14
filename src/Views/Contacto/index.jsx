@@ -1,12 +1,12 @@
 import { Stack, Heading } from "@chakra-ui/react";
 import Container from "../../Components/Commons/Container/Container";
 
-const HomeView = () => {
+const ContactoView = () => {
    return (
       <Container>
-         <Heading>Home</Heading>
+         <Heading>Contacto</Heading>
       </Container>
    );
 };
 
-export default HomeView;
+export default ContactoView;
