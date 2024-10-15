@@ -17,8 +17,16 @@ const colors = {
 
 const Heading = {
    baseStyle: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontFamily: `"Open Sans", sans-serif;`,
+   },
+};
+
+const Text = {
+   baseStyle: {
+      fontWeight: 400,
+      fontFamily: `"Open Sans", sans-serif;`,
+      lineHeight: 1.3,
    },
 };
 
@@ -89,7 +97,7 @@ const styles = {
 const theme = extendTheme({
    colors,
    styles,
-   components: { Button, Heading },
+   components: { Button, Heading, Text },
 });
 
 export default theme;
