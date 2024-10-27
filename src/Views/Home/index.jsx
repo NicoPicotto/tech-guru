@@ -4,7 +4,9 @@ import Container from "../../Components/Commons/Container/Container";
 const HomeView = () => {
    return (
       <Container>
-         <Heading>Home</Heading>
+         <Stack h='100dvh'>
+            <Heading>Home</Heading>
+         </Stack>
       </Container>
    );
 };

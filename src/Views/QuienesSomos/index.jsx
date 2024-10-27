@@ -1,10 +1,11 @@
-import { Stack, Heading } from "@chakra-ui/react";
+import Container from "../../Components/Commons/Container/Container";
+import Principios from "../../Components/QuienesSomos/Principios";
 
 const QuienesSomosView = () => {
    return (
-      <Stack>
-         <Heading>Quienes Somos</Heading>
-      </Stack>
+      <Container>
+         <Principios />
+      </Container>
    );
 };
 

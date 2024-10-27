@@ -17,7 +17,8 @@ const colors = {
 
 const Heading = {
    baseStyle: {
-      fontWeight: 600,
+      fontWeight: 700,
+      lineHeight: 1,
       fontFamily: `"Open Sans", sans-serif;`,
    },
 };

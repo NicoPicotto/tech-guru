@@ -8,10 +8,38 @@ import QuienesSomosView from "./Views/QuienesSomos";
 import ContactoView from "./Views/Contacto";
 import ProductosView from "./Views/Productos";
 import Navbar from "./Components/Navbar";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
    return (
       <ChakraProvider theme={theme}>
+         <AnimatedCursor
+            innerSize={8}
+            outerSize={8}
+            color='0, 118, 180'
+            showSystemCursor={false}
+            outerAlpha={0.2}
+            innerScale={0.7}
+            outerScale={5}
+            hasBlendMode={true}
+            clickables={[
+               "a",
+               "h1",
+               "h2",
+               "h3",
+               "h4",
+               'input[type="text"]',
+               'input[type="email"]',
+               'input[type="number"]',
+               'input[type="submit"]',
+               'input[type="image"]',
+               "label[for]",
+               "select",
+               "textarea",
+               "button",
+               ".link",
+            ]}
+         />
          <Router>
             <ScrollToTop />
             <Navbar />

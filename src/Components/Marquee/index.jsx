@@ -1,12 +1,6 @@
 import { Image } from "@chakra-ui/react";
 import Marquee from "react-marquee-slider";
-import {
-   Stack,
-   Heading,
-   Highlight,
-   Box,
-   useMediaQuery,
-} from "@chakra-ui/react";
+import { Stack, Box, useMediaQuery } from "@chakra-ui/react";
 
 const MarqueeLogos = ({ bgColor }) => {
    const [isMobile] = useMediaQuery("(max-width: 900px)");
@@ -29,7 +23,7 @@ const MarqueeLogos = ({ bgColor }) => {
                   left={0}
                   width='5rem'
                   bgGradient={`linear(to-r, ${
-                     bgColor ? bgColor : "#2B2A2F"
+                     bgColor ? bgColor : "#e3e3e3"
                   }, transparent)`}
                   zIndex={1}
                />
@@ -40,7 +34,7 @@ const MarqueeLogos = ({ bgColor }) => {
                   right={0}
                   width='5rem'
                   bgGradient={`linear(to-l, ${
-                     bgColor ? bgColor : "#2B2A2F"
+                     bgColor ? bgColor : "#e3e3e3"
                   }, transparent)`}
                   zIndex={1}
                />

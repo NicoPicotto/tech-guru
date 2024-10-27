@@ -1,10 +1,11 @@
 import { Stack, Heading } from "@chakra-ui/react";
 import Container from "../../Components/Commons/Container/Container";
+import ContactForm from "../../Components/Contact";
 
 const ContactoView = () => {
    return (
       <Container>
-         <Heading>Contacto</Heading>
+         <ContactForm />
       </Container>
    );
 };
