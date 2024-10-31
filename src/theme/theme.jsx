@@ -38,6 +38,7 @@ const Button = {
       fontFamily: `"Open Sans", sans-serif;`,
       shadow: "md",
       paddingBlock: 1,
+      cursor: "inherit",
    },
    // Variaciones de estilos por prop `variant`
    variants: {

@@ -22,6 +22,7 @@ function App() {
             innerScale={0.7}
             outerScale={5}
             hasBlendMode={true}
+            style={{ zIndex: 9999 }}
             clickables={[
                "a",
                "h1",
