@@ -1,4 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
+import { useEffect } from "react";
 import theme from "./theme/theme";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -9,8 +10,21 @@ import ContactoView from "./Views/Contacto";
 import ProductosView from "./Views/Productos";
 import Navbar from "./Components/Navbar";
 import AnimatedCursor from "react-animated-cursor";
+import Lenis from "@studio-freight/lenis";
+import ProductDetailsView from "./Views/Productos/ProductDetails";
 
 function App() {
+   useEffect(() => {
+      const lenis = new Lenis();
+
+      function raf(time) {
+         lenis.raf(time);
+         requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+   }, []);
+
    return (
       <ChakraProvider theme={theme}>
          <AnimatedCursor
@@ -51,6 +65,7 @@ function App() {
                <Route path='/quienes-somos' element={<QuienesSomosView />} />
                <Route path='/contacto' element={<ContactoView />} />
                <Route path='/productos' element={<ProductosView />} />
+               <Route path='/productos/:id' element={<ProductDetailsView />} />
             </Routes>
          </Router>
       </ChakraProvider>

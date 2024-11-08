@@ -1,4 +1,5 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, transition } from "@chakra-ui/react";
+import { transform } from "framer-motion";
 
 const colors = {
    negro: "#171735",
@@ -47,7 +48,9 @@ const Button = {
          width: "fit-content",
          color: colors.blanco,
          _hover: {
-            bg: colors.terciario,
+            bg: colors.secundario,
+            transform: "translateY(-2px)",
+            dropShadow: "md",
          },
       },
       outline: {
@@ -56,9 +59,11 @@ const Button = {
          borderColor: colors.primario,
          color: colors.negro,
          _hover: {
-            bg: colors.primario,
-            borderColor: colors.primario,
+            bg: colors.secundario,
+            borderColor: colors.secundario,
             color: colors.blanco,
+            transform: "translateY(-2px)",
+            dropShadow: "md",
          },
       },
       ghost: {
@@ -82,6 +87,14 @@ const Button = {
             textDecorationColor: colors.primario,
          },
       },
+      arrow: {
+         bg: colors.primario,
+         width: "fit-content",
+         color: colors.blanco,
+         _hover: {
+            ".arrow": { transform: "translateX(2px)" },
+         },
+      },
    },
 };
 
@@ -91,7 +104,7 @@ const styles = {
          backgroundColor: colors.blanco,
          color: colors.negro,
          fontSize: "16px",
-         scrollBehavior: "smooth",
+         //scrollBehavior: "smooth",
       },
    },
 };

@@ -3,3 +3,7 @@
    background-attachment: fixed !important;
    background-size: cover !important;
 } */
+
+.arrow {
+   transition: 0.2s ease;
+}
