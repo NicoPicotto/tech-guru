@@ -10,14 +10,16 @@ import {
    Input,
    Textarea,
    Spinner,
-   Icon,
 } from "@chakra-ui/react";
-import { SiCalendly } from "react-icons/si";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { useLocation } from "react-router-dom";
 
 const ContactForm = () => {
    const [isSubmitting, setIsSubmitting] = useState(false);
    const [isSubmitted, setIsSubmitted] = useState(false);
    const [isError, setIsError] = useState(false);
+   const location = useLocation();
+   const prefillMessage = location.state?.prefillMessage || "";
 
    const handleSubmit = async (event) => {
       event.preventDefault();
@@ -63,14 +65,14 @@ const ContactForm = () => {
    };
 
    return (
-      <Stack paddingBlock='5rem'>
-         <SimpleGrid columns={2} spacing='5rem' mt='1rem'>
-            <Stack gap='2rem'>
+      <Stack paddingBottom='4rem'>
+         <SimpleGrid columns={2} spacing={10}>
+            <Stack gap={5} justify='center'>
                <Heading size='2xl'>
                   Contáctenos y nuestros especialistas le brindarán la mejor
                   atención.
                </Heading>
-               <Text>
+               <Text fontSize='lg'>
                   También podés agendar tu entrevista directamente según tu
                   disponibilidad haciendo{" "}
                   <Button variant='link' onClick={handleCalendlyClick}>
@@ -86,7 +88,7 @@ const ContactForm = () => {
                      <FormLabel fontSize='sm'>Nombre y apellido</FormLabel>
                      <Input
                         borderColor='gray.400'
-                        bgColor="gray.100"
+                        bgColor='gray.100'
                         type='text'
                         name='nombre'
                         placeholder='Juan Pérez'
@@ -97,7 +99,7 @@ const ContactForm = () => {
                      <FormLabel fontSize='sm'>Nombre de la empresa</FormLabel>
                      <Input
                         borderColor='gray.400'
-                        bgColor="gray.100"
+                        bgColor='gray.100'
                         type='text'
                         name='empresa'
                         placeholder='Empresa SA'
@@ -108,7 +110,7 @@ const ContactForm = () => {
                      <FormLabel fontSize='sm'>Correo electrónico</FormLabel>
                      <Input
                         borderColor='gray.400'
-                        bgColor="gray.100"
+                        bgColor='gray.100'
                         type='text'
                         name='email'
                         placeholder='juanperez@gmail.com'
@@ -119,7 +121,7 @@ const ContactForm = () => {
                      <FormLabel fontSize='sm'>Número de teléfono</FormLabel>
                      <Input
                         borderColor='gray.400'
-                        bgColor="gray.100"
+                        bgColor='gray.100'
                         type='number'
                         name='telefono'
                         placeholder='3514123456'
@@ -131,8 +133,9 @@ const ContactForm = () => {
                   <FormLabel fontSize='sm'>Mensaje</FormLabel>
                   <Textarea
                      borderColor='gray.400'
-                     bgColor="gray.100"
+                     bgColor='gray.100'
                      type='text'
+                     value={prefillMessage}
                      name='mensaje'
                      placeholder='¡Hola amigos de TechGurú!'
                      focusBorderColor='primario'
@@ -142,8 +145,15 @@ const ContactForm = () => {
                   <Button
                      mt={2}
                      type='submit'
+                     variant='arrow'
                      aria-label='Enviar mensaje'
                      disabled={isSubmitting}
+                     rightIcon={
+                        <IoIosArrowRoundForward
+                           className='arrow'
+                           fontSize='1.2rem'
+                        />
+                     }
                   >
                      {isSubmitting ? <Spinner size='sm' /> : "Enviar mensaje"}
                   </Button>

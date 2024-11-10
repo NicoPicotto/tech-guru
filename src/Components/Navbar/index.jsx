@@ -30,7 +30,7 @@ const Navbar = () => {
             direction='row'
             align='center'
             justify='space-between'
-            bgColor='gray.100'
+            bgColor='primarioDarker'
             shadow='md'
             paddingBlock={5}
             rounded='lg'
@@ -42,6 +42,7 @@ const Navbar = () => {
                   <Image
                      w={isMobile ? "2.5rem" : "5rem"}
                      src={logo}
+                     filter='brightness(10)'
                      alt='Logo de Conectar'
                   />
                </Link>
@@ -52,6 +53,12 @@ const Navbar = () => {
                      <Button
                         variant='link'
                         aria-label='Ir a la sección Nosotros'
+                        color='blanco'
+                        _hover={{
+                           textDecoration: "underline",
+                           textUnderlineOffset: "2px",
+                           textDecorationColor: "blanco",
+                        }}
                      >
                         Quienes Somos
                      </Button>
@@ -60,6 +67,12 @@ const Navbar = () => {
                      <Button
                         aria-label='Ir a la sección Servicios'
                         variant='link'
+                        color='blanco'
+                        _hover={{
+                           textDecoration: "underline",
+                           textUnderlineOffset: "2px",
+                           textDecorationColor: "blanco",
+                        }}
                      >
                         Servicios
                      </Button>
@@ -69,6 +82,12 @@ const Navbar = () => {
                      <Button
                         aria-label='Ir a la sección Productos'
                         variant='link'
+                        color='blanco'
+                        _hover={{
+                           textDecoration: "underline",
+                           textUnderlineOffset: "2px",
+                           textDecorationColor: "blanco",
+                        }}
                      >
                         Productos
                      </Button>
@@ -85,6 +104,13 @@ const Navbar = () => {
                      <Button
                         aria-label='Ir a la sección Contacto'
                         variant='outline'
+                        bgColor='blanco'
+                        borderColor='blanco'
+                        _hover={{
+                           bgColor: "blanco",
+                           transform: "translateY(-2px)",
+                           dropShadow: "md",
+                        }}
                      >
                         Contacto
                      </Button>

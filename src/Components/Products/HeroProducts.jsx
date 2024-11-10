@@ -1,28 +1,50 @@
-import { Stack, Heading, Text, Button, Link } from "@chakra-ui/react";
+import {
+   Stack,
+   Heading,
+   Text,
+   Button,
+   Link,
+   SimpleGrid,
+   Image,
+} from "@chakra-ui/react";
+import heroServices from "/assets/Productos/hero-productos.jpg";
 
 const HeroProducts = () => {
    return (
-      <Stack paddingBlock='5rem'>
-         <Stack maxW='70ch' gap={5}>
-            <Heading size='2xl'>
-               Mirá nuestra amplia variedad de productos y repuestos
-            </Heading>
-            <Text>
-               Ofrecemos planes de alquiler de instrumental analítico con opción
-               a compra y planes de compra directa con financiación, con una
-               garantía extendida de diferentes duraciones.
-            </Text>
-            <Stack direction='row'>
-               <Link as='a' href='#equipos'>
-                  <Button>Equipos y repuestos reacondicionados</Button>
-               </Link>
-               <Link as='a' href='#repuestos'>
-                  <Button variant='outline'>
-                     Respuestos y consumibles originales
-                  </Button>
-               </Link>
+      <Stack paddingBottom='4rem' paddingTop='0rem'>
+         <SimpleGrid columns={2} spacing={10}>
+            <Stack gap={5} justify='center'>
+               <Heading size='2xl'>
+                  Mirá nuestra amplia variedad de productos y repuestos
+               </Heading>
+               <Text fontSize='lg'>
+                  Ofrecemos planes de alquiler de instrumental analítico con
+                  opción a compra y planes de compra directa con financiación,
+                  con una garantía extendida de diferentes duraciones.
+               </Text>
+               <Stack direction='row'>
+                  <Link as='a' href='#equipos'>
+                     <Button>Equipos y repuestos reacondicionados</Button>
+                  </Link>
+                  <Link as='a' href='#repuestos'>
+                     <Button variant='outline'>
+                        Respuestos y consumibles originales
+                     </Button>
+                  </Link>
+               </Stack>
             </Stack>
-         </Stack>
+            <Stack align='end'>
+               <Image
+                  src={heroServices}
+                  maxW='80%'
+                  rounded='lg'
+                  style={{
+                     clipPath:
+                        "polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%)",
+                  }}
+               />
+            </Stack>
+         </SimpleGrid>
       </Stack>
    );
 };

@@ -1,4 +1,4 @@
-import { Stack, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import { Stack, Heading, SimpleGrid, Text, Divider } from "@chakra-ui/react";
 import products from "./products";
 import ProductCard from "./ProductCard";
 
@@ -10,18 +10,25 @@ const ProductList = () => {
             position='relative'
             justify='space-between'
             gap='2rem'
+            id='equipos'
          >
             <Stack
                w='40%'
                position='sticky'
-               top={10}
+               top='8rem'
                h='fit-content'
-               id='equipos'
+               bgColor='primario'
+               paddingBlock={5}
+               paddingInline={8}
+               rounded='lg'
+               shadow='sm'
+               gap={3}
             >
-               <Heading w='fit-content'>
+               <Heading color='blanco' fontSize='3xl'>
                   Equipos y repuestos reacondicionados
                </Heading>
-               <Text>
+               <Divider />
+               <Text color='blanco'>
                   Contamos con amplio stock de repuestos e instrumental
                   analítico reacondicionados por nuestro personal técnico
                   conservando la performance de un instrumental nuevo, pero a un
@@ -43,13 +50,26 @@ const ProductList = () => {
             <Stack
                w='40%'
                position='sticky'
-               top={10}
+               top='8rem'
                h='fit-content'
                id='repuestos'
+               bgColor='primario'
+               paddingBlock={5}
+               paddingInline={8}
+               rounded='lg'
+               shadow='sm'
+               gap={3}
             >
-               <Heading w='fit-content'>
+               <Heading color='blanco' fontSize='3xl'>
                   Respuestos y consumibles originales{" "}
                </Heading>
+               <Divider />
+               <Text color='blanco'>
+                  Contamos con amplio stock de repuestos e instrumental
+                  analítico reacondicionados por nuestro personal técnico
+                  conservando la performance de un instrumental nuevo, pero a un
+                  costo más accesible.
+               </Text>
             </Stack>
             <SimpleGrid w='60%' columns={2} spacing={10}>
                {products.map((product) => (

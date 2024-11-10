@@ -10,7 +10,6 @@ import { FaGear } from "react-icons/fa6";
 import { FaCheckCircle, FaTools } from "react-icons/fa";
 import { RiEqualizerFill } from "react-icons/ri";
 import { IoChatbubbleEllipses } from "react-icons/io5";
-import Container from "../../Commons/Container/Container";
 
 const CardsServicios = () => {
    const servicios = [
@@ -47,22 +46,17 @@ const CardsServicios = () => {
    ];
 
    return (
-      <Stack className='reacondicionados' p={5} rounded='lg' shadow='sm'>
-         <Heading color='blanco' textAlign='center'>
-            Lorem ipsum dolor sit amet consectetur
-         </Heading>
-         <SimpleGrid mt={5} columns={5} spacing={5}>
+      <Stack>
+         <SimpleGrid columns={5} spacing={5}>
             {servicios.map((service) => (
                <Stack
                   key={service.title}
-                  border='2px solid'
-                  borderColor='gray.300'
                   rounded='lg'
                   shadow='sm'
                   bgColor='gray.100'
                   p={4}
                   gap={4}
-                  transition='0.1s ease'
+                  transition='0.2s ease'
                   _hover={{
                      transform: "translateY(-5px)",
                      shadow: "md",

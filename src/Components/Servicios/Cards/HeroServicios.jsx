@@ -1,19 +1,18 @@
 import { Stack, Heading, Text, SimpleGrid, Image } from "@chakra-ui/react";
-import heroServices from "/assets/Services/hero-services.jpg";
+import heroServices from "/assets/Services/servicios-01.jpg";
 
 const HeroServicios = () => {
    return (
-      <Stack paddingBlock='5rem'>
+      <Stack paddingBottom='4rem' paddingTop='0'>
          <SimpleGrid columns={2} spacing={10}>
-            <Stack maxW='70ch' gap={5} justify='center'>
-               <Heading size='2xl'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-               </Heading>
-               <Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Quisque quis metus ac risus porttitor maximus. Quisque posuere
-                  est sed egestas blandit. Ut risus est, euismod eget faucibus
-                  id, mollis ut odio. Aliquam congue efficitur pulvinar.
+            <Stack gap={5} justify='center'>
+               <Heading size='2xl'>Servicios y soluciones a tu medida</Heading>
+               <Text fontSize='lg'>
+                  En Tech Guru ofrecemos un paquete de servicios completo para
+                  que puedas trabajar de forma continua y sin contratiempos y
+                  hacer que cada proceso sea más eficiente. Para ello, hemos
+                  organizado todos los servicios para que cubran todas las
+                  situaciones que necesitas.
                </Text>
             </Stack>
             <Stack align='end'>

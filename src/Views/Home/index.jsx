@@ -1,12 +1,12 @@
-import { Stack, Heading } from "@chakra-ui/react";
 import Container from "../../Components/Commons/Container/Container";
+import HeroHome from "../../Components/Home/HeroHome";
+import MarqueeLogos from '../../Components/Marquee';
 
 const HomeView = () => {
    return (
       <Container>
-         <Stack>
-            <Heading>Home</Heading>
-         </Stack>
+         <HeroHome />
+         <MarqueeLogos />
       </Container>
    );
 };

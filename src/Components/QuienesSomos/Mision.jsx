@@ -28,7 +28,7 @@ const Mision = () => {
    ];
 
    return (
-      <SimpleGrid columns={3} spacing={5} marginBottom='5rem'>
+      <SimpleGrid columns={3} spacing={5} marginBottom='4rem'>
          {valores.map((v) => (
             <Stack
                bgColor='gray.100'

@@ -1,9 +1,9 @@
 import { Stack, Heading, Text, SimpleGrid, Image } from "@chakra-ui/react";
-import heroServices from "/assets/Services/hero-services.jpg";
+import heroServices from "/assets/QuienesSomos/quienes-1.jpg";
 
 const HeroQuienesSomos = () => {
    return (
-      <Stack paddingBlock='5rem'>
+      <Stack paddingBottom='4rem' paddingTop="0">
          <SimpleGrid columns={2} spacing={10}>
             <Stack gap={5} justify='center'>
                <Heading size='2xl'>

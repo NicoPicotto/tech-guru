@@ -92,7 +92,8 @@ const Button = {
          width: "fit-content",
          color: colors.blanco,
          _hover: {
-            ".arrow": { transform: "translateX(2px)" },
+            ".arrow": { transform: "translateX(3px)" },
+            bg: colors.primarioDarker,
          },
       },
    },

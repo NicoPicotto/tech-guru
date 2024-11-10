@@ -6,23 +6,16 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 const ProductCard = ({ product }) => {
    return (
       <Stack
-         border='2px solid'
-         borderColor='gray.300'
          rounded='lg'
          overflow='hidden'
          shadow='sm'
-         bgColor="white"
+         bgColor='gray.100'
          transition='0.2s ease'
-         _hover={{
-            borderColor: "primario",
-            transform: "translateY(-2px)",
-            shadow: "md",
-         }}
       >
          <Image aspectRatio={1.5} src={product.imagen} alt={product.titulo} />
-         <Stack padding={5} paddingTop={3}>
+         <Stack paddingBlock={4} paddingInline={5}>
             <Heading size='md'>{product.titulo}</Heading>
-            <Text fontSize='sm'>{product.descripcion}</Text>
+            <Text>{product.descripcion}</Text>
             <Link as={ReachLink} to={`/productos/${product.id}`}>
                <Button
                   rightIcon={
@@ -33,7 +26,6 @@ const ProductCard = ({ product }) => {
                   }
                   variant='arrow'
                   mt='2'
-                  size='sm'
                >
                   Ver detalles
                </Button>
