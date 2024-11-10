@@ -10,6 +10,7 @@ import { FaGear } from "react-icons/fa6";
 import { FaCheckCircle, FaTools } from "react-icons/fa";
 import { RiEqualizerFill } from "react-icons/ri";
 import { IoChatbubbleEllipses } from "react-icons/io5";
+import Container from "../../Commons/Container/Container";
 
 const CardsServicios = () => {
    const servicios = [
@@ -46,40 +47,47 @@ const CardsServicios = () => {
    ];
 
    return (
-      <SimpleGrid columns={5} spacing={5}>
-         {servicios.map((service) => (
-            <Stack
-               key={service.title}
-               border='2px solid'
-               shadow='md'
-               borderRadius={5}
-               borderColor='primario'
-               p={4}
-               gap={4}
-               transition='0.1s ease'
-               _hover={{
-                  bgColor: "primario",
-                  color: "blanco",
-                  transform: "translateY(-10px)",
-                  ".icon": { color: "blanco" },
-                  ".divider": { borderColor: "blanco" },
-               }}
-            >
-               <Icon
-                  className='icon'
-                  color='primario'
-                  as={service.icon}
-                  fontSize='4xl'
-               />
-               <Stack minH='50px'>
-                  <Heading size='md'>{service.title}</Heading>
-               </Stack>
+      <Stack className='reacondicionados' p={5} rounded='lg' shadow='sm'>
+         <Heading color='blanco' textAlign='center'>
+            Lorem ipsum dolor sit amet consectetur
+         </Heading>
+         <SimpleGrid mt={5} columns={5} spacing={5}>
+            {servicios.map((service) => (
+               <Stack
+                  key={service.title}
+                  border='2px solid'
+                  borderColor='gray.300'
+                  rounded='lg'
+                  shadow='sm'
+                  bgColor='gray.100'
+                  p={4}
+                  gap={4}
+                  transition='0.1s ease'
+                  _hover={{
+                     transform: "translateY(-5px)",
+                     shadow: "md",
+                  }}
+               >
+                  <Icon
+                     className='icon'
+                     color='primario'
+                     as={service.icon}
+                     fontSize='4xl'
+                  />
+                  <Stack minH='50px'>
+                     <Heading size='md' color='negro'>
+                        {service.title}
+                     </Heading>
+                  </Stack>
 
-               <Divider className='divider' borderColor='primario' />
-               <Text textWrap='pretty'>{service.description}</Text>
-            </Stack>
-         ))}
-      </SimpleGrid>
+                  <Divider className='divider' borderColor='primario' />
+                  <Text color='negro' textWrap='pretty'>
+                     {service.description}
+                  </Text>
+               </Stack>
+            ))}
+         </SimpleGrid>
+      </Stack>
    );
 };
 

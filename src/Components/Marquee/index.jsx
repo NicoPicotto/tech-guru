@@ -1,6 +1,6 @@
 import { Image } from "@chakra-ui/react";
 import Marquee from "react-marquee-slider";
-import { Stack, Box, useMediaQuery } from "@chakra-ui/react";
+import { Stack, Box, useMediaQuery, Heading } from "@chakra-ui/react";
 
 const MarqueeLogos = ({ bgColor }) => {
    const [isMobile] = useMediaQuery("(max-width: 900px)");
@@ -15,6 +15,7 @@ const MarqueeLogos = ({ bgColor }) => {
    return (
       <Stack align='center' paddingInline='2rem' paddingBlock='2rem'>
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
+            <Heading mb={5} textAlign='center'>Confían en nosotros </Heading>
             <Stack overflow='hidden' maxW='80rem' w='100%' position='relative'>
                <Box
                   position='absolute'

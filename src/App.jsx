@@ -12,6 +12,8 @@ import Navbar from "./Components/Navbar";
 import AnimatedCursor from "react-animated-cursor";
 import Lenis from "@studio-freight/lenis";
 import ProductDetailsView from "./Views/Productos/ProductDetails";
+import ClientesView from "./Views/Clientes/ClientesView";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
    useEffect(() => {
@@ -63,10 +65,12 @@ function App() {
                <Route path='/' element={<HomeView />} />
                <Route path='/servicios' element={<ServiciosView />} />
                <Route path='/quienes-somos' element={<QuienesSomosView />} />
+               <Route path='/clientes' element={<ClientesView />} />
                <Route path='/contacto' element={<ContactoView />} />
                <Route path='/productos' element={<ProductosView />} />
                <Route path='/productos/:id' element={<ProductDetailsView />} />
             </Routes>
+            <Footer />
          </Router>
       </ChakraProvider>
    );

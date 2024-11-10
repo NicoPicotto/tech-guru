@@ -1,6 +1,9 @@
 import { Stack, Heading, Text } from "@chakra-ui/react";
+import { useState } from "react";
 
 const Principios = () => {
+   const [hoveredIndex, setHoveredIndex] = useState(null);
+
    const principios = [
       {
          title: "Enfoque en el Cliente",
@@ -29,16 +32,41 @@ const Principios = () => {
       },
    ];
    return (
-      <Stack gap={0}>
-         {principios.map((p) => (
+      <Stack
+         gap={0}
+         bgColor='gray.100'
+         paddingBlock={5}
+         paddingInline={8}
+         rounded='lg'
+         shadow='sm'
+      >
+         {principios.map((p, index) => (
             <Stack
                direction='row'
                key={p.title}
-               borderBottom='1px solid #0076b4'
+               index={index}
+               borderBottom='1px solid'
+               borderColor='negro'
                paddingBlock='2rem'
                justify='space-between'
+               onMouseEnter={() => setHoveredIndex(index)}
+               _hover={{ ".headingPrincipios": { color: "primario" } }}
+               onMouseLeave={() => setHoveredIndex(null)}
+               style={{
+                  filter:
+                     hoveredIndex !== null && hoveredIndex !== index
+                        ? "blur(3px)"
+                        : "none",
+                  transition: "filter 0.3s ease",
+               }}
             >
-               <Heading minW='40%' h='fit-content'>
+               <Heading
+                  className='headingPrincipios'
+                  color='negro'
+                  minW='40%'
+                  transition='0.3s ease'
+                  h='fit-content'
+               >
                   {p.title}
                </Heading>
 

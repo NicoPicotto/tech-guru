@@ -1,11 +1,11 @@
-import { extendTheme, transition } from "@chakra-ui/react";
-import { transform } from "framer-motion";
+import { extendTheme } from "@chakra-ui/react";
 
 const colors = {
    negro: "#171735",
    gris: "#292929",
    blanco: "#e3e3e3",
    primario: "#0076b4",
+   primarioDarker: "#003c5c",
    secundario: "#57a639",
    terciario: "#297aa3",
 };
@@ -48,7 +48,7 @@ const Button = {
          width: "fit-content",
          color: colors.blanco,
          _hover: {
-            bg: colors.secundario,
+            bg: colors.primarioDarker,
             transform: "translateY(-2px)",
             dropShadow: "md",
          },
@@ -59,8 +59,8 @@ const Button = {
          borderColor: colors.primario,
          color: colors.negro,
          _hover: {
-            bg: colors.secundario,
-            borderColor: colors.secundario,
+            bg: colors.primarioDarker,
+            borderColor: colors.primarioDarker,
             color: colors.blanco,
             transform: "translateY(-2px)",
             dropShadow: "md",

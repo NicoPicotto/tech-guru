@@ -63,15 +63,30 @@ const ContactForm = () => {
    };
 
    return (
-      <Stack>
-         <Heading>Esperamos tu mensaje</Heading>
-         <SimpleGrid columns={2} spacing={5}>
-            <Stack mt={5} as='form' onSubmit={handleSubmit}>
+      <Stack paddingBlock='5rem'>
+         <SimpleGrid columns={2} spacing='5rem' mt='1rem'>
+            <Stack gap='2rem'>
+               <Heading size='2xl'>
+                  Contáctenos y nuestros especialistas le brindarán la mejor
+                  atención.
+               </Heading>
+               <Text>
+                  También podés agendar tu entrevista directamente según tu
+                  disponibilidad haciendo{" "}
+                  <Button variant='link' onClick={handleCalendlyClick}>
+                     click aquí
+                  </Button>
+                  .
+               </Text>
+            </Stack>
+
+            <Stack as='form' onSubmit={handleSubmit}>
                <SimpleGrid columns={2} spacing={3}>
                   <FormControl>
                      <FormLabel fontSize='sm'>Nombre y apellido</FormLabel>
                      <Input
                         borderColor='gray.400'
+                        bgColor="gray.100"
                         type='text'
                         name='nombre'
                         placeholder='Juan Pérez'
@@ -82,6 +97,7 @@ const ContactForm = () => {
                      <FormLabel fontSize='sm'>Nombre de la empresa</FormLabel>
                      <Input
                         borderColor='gray.400'
+                        bgColor="gray.100"
                         type='text'
                         name='empresa'
                         placeholder='Empresa SA'
@@ -92,6 +108,7 @@ const ContactForm = () => {
                      <FormLabel fontSize='sm'>Correo electrónico</FormLabel>
                      <Input
                         borderColor='gray.400'
+                        bgColor="gray.100"
                         type='text'
                         name='email'
                         placeholder='juanperez@gmail.com'
@@ -102,6 +119,7 @@ const ContactForm = () => {
                      <FormLabel fontSize='sm'>Número de teléfono</FormLabel>
                      <Input
                         borderColor='gray.400'
+                        bgColor="gray.100"
                         type='number'
                         name='telefono'
                         placeholder='3514123456'
@@ -113,6 +131,7 @@ const ContactForm = () => {
                   <FormLabel fontSize='sm'>Mensaje</FormLabel>
                   <Textarea
                      borderColor='gray.400'
+                     bgColor="gray.100"
                      type='text'
                      name='mensaje'
                      placeholder='¡Hola amigos de TechGurú!'
@@ -139,25 +158,6 @@ const ContactForm = () => {
                      nuevamente.
                   </Text>
                )}
-            </Stack>
-            <Stack align='end'>
-               <Stack
-                  border='2px solid'
-                  borderColor='primario'
-                  paddingInline={5}
-                  paddingBlock={3}
-                  borderRadius={5}
-                  as='button'
-                  cursor='none'
-                  onClick={handleCalendlyClick}
-                  w='fit-content'
-                  
-               >
-                  <Text textAlign='right' w='45ch'>
-                     También podés agendar tu entrevista directamente según tu
-                     disponibilidad haciendo click aquí.
-                  </Text>
-               </Stack>
             </Stack>
          </SimpleGrid>
       </Stack>

@@ -17,13 +17,25 @@ const Navbar = () => {
    const [isMobile] = useMediaQuery("(max-width: 900px)");
 
    return (
-      <Stack p='1.5rem 2rem' align='center' zIndex={100}>
+      <Stack
+         p='1.5rem 2rem'
+         align='center'
+         zIndex={100}
+         position='sticky'
+         top={0}
+      >
          <Stack
             maxW='80rem'
             w='100%'
             direction='row'
             align='center'
             justify='space-between'
+            bgColor='gray.100'
+            shadow='md'
+            paddingBlock={5}
+            rounded='lg'
+            paddingInline={5}
+            transition='0.2s ease'
          >
             <Stack>
                <Link as={ReachLink} to='/'>
@@ -61,6 +73,14 @@ const Navbar = () => {
                         Productos
                      </Button>
                   </Link>
+                  {/* <Link as={ReachLink} to='/clientes'>
+                     <Button
+                        aria-label='Ir a la sección Clientes'
+                        variant='link'
+                     >
+                        Clientes
+                     </Button>
+                  </Link> */}
                   <Link as={ReachLink} to='/contacto'>
                      <Button
                         aria-label='Ir a la sección Contacto'

@@ -4,14 +4,20 @@ import ProductCard from "./ProductCard";
 
 const ProductList = () => {
    return (
-      <Stack paddingBlock='5rem' gap="5rem">
+      <Stack paddingBlock='5rem' gap='5rem'>
          <Stack
             direction='row'
             position='relative'
             justify='space-between'
             gap='2rem'
          >
-            <Stack w='40%' position='sticky' top={10} h='fit-content'>
+            <Stack
+               w='40%'
+               position='sticky'
+               top={10}
+               h='fit-content'
+               id='equipos'
+            >
                <Heading w='fit-content'>
                   Equipos y repuestos reacondicionados
                </Heading>
@@ -34,7 +40,13 @@ const ProductList = () => {
             justify='space-between'
             gap='2rem'
          >
-            <Stack w='40%' position='sticky' top={10} h='fit-content'>
+            <Stack
+               w='40%'
+               position='sticky'
+               top={10}
+               h='fit-content'
+               id='repuestos'
+            >
                <Heading w='fit-content'>
                   Respuestos y consumibles originales{" "}
                </Heading>
