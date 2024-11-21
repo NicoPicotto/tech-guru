@@ -20,13 +20,15 @@ const ProductDetails = () => {
    const product = products.find((item) => item.id === Number(id));
 
    return (
-      <SimpleGrid columns={2} spacing={10}>
+      <SimpleGrid columns={2} spacing={10} position='relative'>
          <Image
             rounded='lg'
             shadow='sm'
             src={product.imagen}
             aspectRatio={1}
             alt={product.titulo}
+            position='sticky'
+            top='8rem'
          />
          <Stack>
             <Link as={ReachLink} to='/productos'>
@@ -42,7 +44,22 @@ const ProductDetails = () => {
             <Text size='lg'>{product.descripcion}</Text>
             <Divider borderColor='gray.400' marginBottom={4} marginTop={4} />
             <Stack gap={4}>
-               {product.componentes.map((c, index) => (
+               <Heading as='h3' size='md'>
+                  Configuración Básica
+               </Heading>
+               {product.configuracion.map((c, index) => (
+                  <Stack key={index} direction='row'>
+                     <Icon as={FaCheck} mt={0.5} color='secundario' />
+                     <Text>{c}</Text>
+                  </Stack>
+               ))}
+            </Stack>
+            <Divider borderColor='gray.400' marginBottom={4} marginTop={4} />
+            <Stack gap={4}>
+               <Heading as='h3' size='md'>
+                  Módulos Adicionales
+               </Heading>
+               {product.modulos.map((c, index) => (
                   <Stack key={index} direction='row'>
                      <Icon as={FaCheck} mt={0.5} color='secundario' />
                      <Text>{c}</Text>
@@ -56,7 +73,7 @@ const ProductDetails = () => {
                   prefillMessage: `Hola! Estoy interesado en el producto ${product.titulo}, ¿Podrían ponerse en contacto conmigo?`,
                }}
             >
-               <Button mt={4}>Contactarme</Button>
+               <Button mt={4}>Contactarme por este producto</Button>
             </Link>
          </Stack>
       </SimpleGrid>

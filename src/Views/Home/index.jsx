@@ -1,5 +1,6 @@
 import Container from "../../Components/Commons/Container/Container";
 import HeroHome from "../../Components/Home/HeroHome";
+import Numbers from '../../Components/Home/Numbers';
 import MarqueeLogos from '../../Components/Marquee';
 
 const HomeView = () => {
@@ -7,6 +8,7 @@ const HomeView = () => {
       <Container>
          <HeroHome />
          <MarqueeLogos />
+         <Numbers />
       </Container>
    );
 };
