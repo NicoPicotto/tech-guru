@@ -1,16 +1,16 @@
 import {
-   Stack,
-   Heading,
-   Text,
-   Box,
-   Image,
-   Button,
    Link,
+   Stack,
+   Text,
+   Heading,
+   Button,
+   Image,
+   Box,
 } from "@chakra-ui/react";
-import heroServices from "/assets/Home/hero-img.jpg";
 import { Link as ReachLink } from "react-router-dom";
+import agilentHome from "/assets/Home/agilentHome.jpg";
 
-const HeroHome = () => {
+const FirstCTA = () => {
    return (
       <Stack paddingTop='0'>
          <Stack position='relative' rounded='lg' overflow='hidden'>
@@ -21,11 +21,11 @@ const HeroHome = () => {
                left='0'
                width='100%'
                height='100%'
-               bg='linear-gradient(45deg, rgba(0,60,92,1) 17%, rgba(0,60,92,0.7035407913165266) 49%, rgba(0,0,0,0) 79%);'
+               bg='linear-gradient(225deg, rgba(0,60,92,1) 17%, rgba(0,60,92,0.7) 70%, rgba(0,0,0,0) 85%)'
                zIndex='1'
             />
             <Image
-               src={heroServices}
+               src={agilentHome}
                aspectRatio={16 / 9}
                maxH='30rem'
                alt='hero home'
@@ -38,19 +38,20 @@ const HeroHome = () => {
                justify='center'
                position='absolute'
                bottom={10}
-               left={10}
+               right={10}
+               align='end'
                maxW='70ch'
                zIndex='2'
             >
-               <Heading size='2xl' color='white'>
-                  Servicio Técnico para Instrumental Analitico
+               <Heading size='2xl' color='white' textAlign="right">
+                  Servicio Técnico Agilent ®*
                </Heading>
-               <Text fontSize='lg' color='white' maxW='60ch'>
-                  Somos una empresa enfocada al mantenimiento, calificación y
-                  reparación de sistemas cromatográficos para laboratorios.
-                  Abordamos tanto software como hardware y nos especializamos en
-                  su coordinación y compatibilidad general y mantenimiento
-                  sostenible.
+               <Text fontSize='lg' color='white'  textAlign="right" maxW='60ch'>
+                  En Tech Guru ofrecemos un paquete de servicios completo para
+                  que puedas trabajar de forma continua y sin contratiempos y
+                  hacer que cada proceso sea más eficiente. Para ello, hemos
+                  organizado todos los servicios para que cubran todas las
+                  situaciones que necesitas.
                </Text>
                <Stack direction='row'>
                   <Link as={ReachLink} to='/servicios'>
@@ -68,22 +69,6 @@ const HeroHome = () => {
                         Conocé nuestros servicios
                      </Button>
                   </Link>
-                  <Link as={ReachLink} to='productos'>
-                     <Button
-                        aria-label='Ir a la sección Contacto'
-                        variant='outline'
-                        color='blanco'
-                        borderColor='blanco'
-                        _hover={{
-                           bgColor: "blanco",
-                           transform: "translateY(-2px)",
-                           dropShadow: "md",
-                           color: "negro",
-                        }}
-                     >
-                        Stock de equipos y repuestos
-                     </Button>
-                  </Link>
                </Stack>
             </Stack>
          </Stack>
@@ -91,4 +76,4 @@ const HeroHome = () => {
    );
 };
 
-export default HeroHome;
+export default FirstCTA;

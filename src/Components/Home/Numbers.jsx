@@ -24,7 +24,7 @@ const Numbers = () => {
 
       gsap.to(clientes, {
          value: 200,
-         duration: 3,
+         duration: 2,
          ease: "power2.out",
          onUpdate: () => {
             clientesRef.current.innerHTML = Math.floor(
@@ -41,7 +41,7 @@ const Numbers = () => {
 
       gsap.to(mantenimientos, {
          value: 500,
-         duration: 3,
+         duration: 2,
          ease: "power2.out",
          onUpdate: () => {
             mantenimientosRef.current.innerHTML = Math.floor(
@@ -75,72 +75,63 @@ const Numbers = () => {
    });
 
    return (
-      <Stack
-         bgColor='primarioDarker'
-         paddingBlock={10}
-         paddingInline={8}
-         rounded='lg'
-      >
+      <Stack marginBlock='6rem'>
          <SimpleGrid columns={3} spacing={10} position='relative'>
             <Stack
                borderRight='1px solid'
-               borderColor='gray.100'
+               borderColor='primarioDarker'
                align='center'
             >
                <Stack direction='row' align='center' justify='center'>
-                  <Heading color='blanco' size='2xl'>
+                  <Heading color='secundario' size='2xl'>
                      +
                   </Heading>
                   <Heading
                      ref={clientesRef}
                      size='4xl'
-                     color='white'
+                     color='primarioDarker'
                      fontWeight={500}
                   >
                      0
                   </Heading>
                </Stack>
-               <Text fontSize='xl' color='blanco'>
+               <Text fontSize='xl' color='primarioDarker'>
                   CLIENTES
                </Text>
             </Stack>
-            <Stack
-               
-               align='center'
-            >
+            <Stack align='center'>
                <Stack direction='row' align='center' justify='center'>
-                  <Heading color='blanco' size='2xl'>
+                  <Heading color='secundario' size='2xl'>
                      +
                   </Heading>
                   <Heading
                      ref={mantenimientosRef}
                      size='4xl'
-                     color='white'
+                     color='primarioDarker'
                      fontWeight={500}
                   >
                      0
                   </Heading>
                </Stack>
-               <Text fontSize='xl' color='blanco'>
+               <Text fontSize='xl' color='primarioDarker'>
                   MANTENIMIENTOS REALIZADOS
                </Text>
             </Stack>
-            <Stack align='center' borderLeft='1px solid'
-               borderColor='gray.100'>
+            <Stack align='center' borderLeft='1px solid' borderColor='primarioDarker'>
                <Stack direction='row' align='center' justify='center'>
-                  <Heading color='blanco' size='2xl'>
+                  <Heading color='secundario' size='2xl'>
                      +
                   </Heading>
                   <Heading
                      ref={experienciaRef}
                      size='4xl'
-                     color='white'
+                     color='primarioDarker'
                      fontWeight={500}
                   >
                      0
                   </Heading>
                </Stack>
-               <Text fontSize='xl' color='blanco'>
+               <Text fontSize='xl' color='bprimarioDarker'>
                   AÑOS DE EXPERIENCIA
                </Text>
             </Stack>

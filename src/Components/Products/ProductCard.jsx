@@ -13,9 +13,9 @@ const ProductCard = ({ product }) => {
          transition='0.2s ease'
       >
          <Image aspectRatio={1.5} src={product.imagen} alt={product.titulo} />
-         <Stack paddingBlock={4} paddingInline={5}>
+         <Stack p={5} justify='space-between' h='100%'>
             <Heading size='md'>{product.titulo}</Heading>
-            <Text>{product.descripcion}</Text>
+            {/* <Text>{product.descripcion}</Text> */}
             <Link as={ReachLink} to={`/productos/${product.id}`}>
                <Button
                   rightIcon={

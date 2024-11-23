@@ -29,6 +29,7 @@ const ProductDetails = () => {
             alt={product.titulo}
             position='sticky'
             top='8rem'
+            justifySelf='center'
          />
          <Stack>
             <Link as={ReachLink} to='/productos'>
@@ -54,18 +55,28 @@ const ProductDetails = () => {
                   </Stack>
                ))}
             </Stack>
-            <Divider borderColor='gray.400' marginBottom={4} marginTop={4} />
-            <Stack gap={4}>
-               <Heading as='h3' size='md'>
-                  Módulos Adicionales
-               </Heading>
-               {product.modulos.map((c, index) => (
-                  <Stack key={index} direction='row'>
-                     <Icon as={FaCheck} mt={0.5} color='secundario' />
-                     <Text>{c}</Text>
+
+            {product.modulos.length > 0 && (
+               <>
+                  <Divider
+                     borderColor='gray.400'
+                     marginBottom={4}
+                     marginTop={4}
+                  />
+                  <Stack gap={4}>
+                     <Heading as='h3' size='md'>
+                        Módulos Adicionales
+                     </Heading>
+                     {product.modulos.map((c, index) => (
+                        <Stack key={index} direction='row'>
+                           <Icon as={FaCheck} mt={0.5} color='secundario' />
+                           <Text>{c}</Text>
+                        </Stack>
+                     ))}
                   </Stack>
-               ))}
-            </Stack>
+               </>
+            )}
+
             <Link
                as={ReachLink}
                to='/contacto'

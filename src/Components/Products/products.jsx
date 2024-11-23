@@ -3,8 +3,7 @@ const products = [
       id: 1,
       titulo:
          "Sistema HPLC de 6 piezas Agilent HP 1100 | Computadora de control",
-      descripcion:
-         "Sistema completo de HPLC Agilent 1100 con computadora de control y su elección de bomba y detector. La personalización adicional está disponible bajo petición.",
+      descripcion: "",
       imagen: "/assets/Productos/agilent-1100.jpg",
       configuracion: [
          "Bomba Isocrática G1310A.",
@@ -49,7 +48,7 @@ const products = [
       id: 3,
       titulo: "Sistema HPLC Agilent Technologies 1260 Infinity",
       descripcion: "",
-      imagen: "",
+      imagen: "/assets/Productos/1260-infinity.png",
       configuracion: [
          "Bomba Isocrática G1310B.",
          "Detector de longitud de onda variable G1314B (VWD).",
@@ -71,7 +70,7 @@ const products = [
       id: 4,
       titulo: "Espectrofotómetro Hewlett Packard 8453",
       descripcion: "",
-      imagen: "",
+      imagen: "/assets/Productos/8453-hp.jpg",
       configuracion: [
          "Matriz de diodos que mide todo el espectro, desde la luz ultravioleta hasta la luz visible, y ofrece resultados en menos de un segundo.",
          "Sistema de espectrofotómetro de haz único sin partes móviles, lo que le proporciona una óptica estable, un alto rendimiento y un bajo nivel de ruido.",
@@ -84,7 +83,7 @@ const products = [
       id: 5,
       titulo: "Sistema GC Agilent Technologies 6890N G1530N",
       descripcion: "",
-      imagen: "",
+      imagen: "/assets/Productos/6890n.jpg",
       configuracion: [
          "Con SSL único y FPD único.",
          "Muestreador automático Agilent (HP) 7683 Series: una torre de inyector G2913A, una bandeja G2914A.",
@@ -97,7 +96,7 @@ const products = [
       id: 6,
       titulo: "Sistema GC Agilent Technologies 7890A",
       descripcion: "",
-      imagen: "",
+      imagen: "/assets/Productos/7890A.jpg",
       configuracion: [
          "Agilent 7890A Network Gas Chromatograph.",
          "Muestreador Automático Agilent 7683 Series.",
@@ -111,7 +110,7 @@ const products = [
       id: 7,
       titulo: "Muestreador Agilent 7697A Headspace",
       descripcion: "",
-      imagen: "",
+      imagen: "/assets/Productos/7697A.png",
       configuracion: [
          "Muestreador Agilent 7697A para cromatógrafo de gases y sistemas GCMS.",
          "Estándar 111 configuración de muestra con 3 muestras prioritarias.",

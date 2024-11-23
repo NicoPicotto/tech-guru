@@ -67,7 +67,7 @@ const ContactForm = () => {
    return (
       <Stack paddingBottom='4rem'>
          <SimpleGrid columns={2} spacing={10}>
-            <Stack gap={5} justify='center'>
+            <Stack gap={5} justify='start'>
                <Heading size='2xl'>
                   Contáctenos y nuestros especialistas le brindarán la mejor
                   atención.

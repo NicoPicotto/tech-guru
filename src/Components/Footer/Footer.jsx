@@ -129,13 +129,17 @@ const Footer = () => {
                </Stack>
                <Divider marginBlock={4} />
                <Stack justify='space-between' direction='row'>
-                  <Text color='blanco' fontSize='xs' maxW='80ch'>
-                     *AGILENT®, Chemstation® y Varian® son propiedad de Agilent
-                     Technologies, Inc. TECHGURU S.A. no está vinculada a
-                     Agilent Technologies, Inc. Hewlett Packard® es propiedad de
-                     Hewlett-Packard Company. TECHGURU S.A. no está vinculada a
-                     Hewlett-Packard Company.
-                  </Text>
+                  <Stack gap={0}>
+                     <Text color='blanco' fontSize='xs' maxW='80ch'>
+                        *Tech Guru S.A. no está vinculada a Hewelett-Packard
+                        Company
+                     </Text>
+                     <Text color='blanco' fontSize='xs' maxW='80ch'>
+                        *Tech Guru S.A. no está vinculada a Agilent
+                        Technologies, Inc
+                     </Text>
+                  </Stack>
+
                   <Text color='blanco' fontSize='xs'>
                      Copyright © 2024 TechGuru
                   </Text>

@@ -48,6 +48,7 @@ const Principios = () => {
                borderBottom='1px solid'
                borderColor='negro'
                paddingBlock='2rem'
+               gap={8}
                justify='space-between'
                onMouseEnter={() => setHoveredIndex(index)}
                _hover={{ ".headingPrincipios": { color: "primario" } }}

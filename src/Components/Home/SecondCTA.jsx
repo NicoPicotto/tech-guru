@@ -1,18 +1,17 @@
 import {
-   Stack,
-   Heading,
-   Text,
-   Box,
-   Image,
-   Button,
    Link,
+   Stack,
+   Text,
+   Heading,
+   Button,
+   Image,
+   Box,
 } from "@chakra-ui/react";
-import heroServices from "/assets/Home/hero-img.jpg";
 import { Link as ReachLink } from "react-router-dom";
-
-const HeroHome = () => {
+import sostenibilidadHome from "/assets/Home/sostenibilidadHome.jpg";
+const SecondCTA = () => {
    return (
-      <Stack paddingTop='0'>
+      <Stack paddingTop='0' marginBottom="2rem">
          <Stack position='relative' rounded='lg' overflow='hidden'>
             {/* Gradiente en overlay */}
             <Box
@@ -25,7 +24,7 @@ const HeroHome = () => {
                zIndex='1'
             />
             <Image
-               src={heroServices}
+               src={sostenibilidadHome}
                aspectRatio={16 / 9}
                maxH='30rem'
                alt='hero home'
@@ -43,17 +42,16 @@ const HeroHome = () => {
                zIndex='2'
             >
                <Heading size='2xl' color='white'>
-                  Servicio Técnico para Instrumental Analitico
+                  Sostenibilidad Ambiental
                </Heading>
-               <Text fontSize='lg' color='white' maxW='60ch'>
-                  Somos una empresa enfocada al mantenimiento, calificación y
-                  reparación de sistemas cromatográficos para laboratorios.
-                  Abordamos tanto software como hardware y nos especializamos en
-                  su coordinación y compatibilidad general y mantenimiento
-                  sostenible.
+               <Text fontSize='lg' color='white' maxW='55ch'>
+                  Adoptamos prácticas que minimizan nuestro impacto ambiental.
+                  Esto incluye el uso eficiente de recursos, la reducción de
+                  residuos, y la implementación de procesos que favorezcan la
+                  sostenibilidad a lo largo de nuestra cadena de valor.
                </Text>
                <Stack direction='row'>
-                  <Link as={ReachLink} to='/servicios'>
+                  <Link as={ReachLink} to='/quienes-somos'>
                      <Button
                         aria-label='Ir a la sección Contacto'
                         variant='outline'
@@ -65,23 +63,7 @@ const HeroHome = () => {
                            dropShadow: "md",
                         }}
                      >
-                        Conocé nuestros servicios
-                     </Button>
-                  </Link>
-                  <Link as={ReachLink} to='productos'>
-                     <Button
-                        aria-label='Ir a la sección Contacto'
-                        variant='outline'
-                        color='blanco'
-                        borderColor='blanco'
-                        _hover={{
-                           bgColor: "blanco",
-                           transform: "translateY(-2px)",
-                           dropShadow: "md",
-                           color: "negro",
-                        }}
-                     >
-                        Stock de equipos y repuestos
+                        Conocé más sobre nosotros
                      </Button>
                   </Link>
                </Stack>
@@ -91,4 +73,4 @@ const HeroHome = () => {
    );
 };
 
-export default HeroHome;
+export default SecondCTA;
