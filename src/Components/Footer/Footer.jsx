@@ -97,10 +97,17 @@ const Footer = () => {
                            Contacto
                         </Heading>
                         <Text color='blanco'>
-                           Calle Falsa 123, General Deheza, Córdoba.
+                           Solari 780 - Ciudadela - Buenos Aires.
                         </Text>
-                        <Text color='blanco'>(0358) 155123456</Text>
-                        <Text color='blanco'>info@techguru.com.ar</Text>
+                        <Text
+                           as='a'
+                           target='_blank'
+                           href='https://wa.link/3csjhw'
+                           color='blanco'
+                        >
+                           (0358) 155123456
+                        </Text>
+                        <Text color='blanco'>ventas@techguru.com.ar</Text>
                         <Stack direction='row' align='center' gap={2}>
                            <IconButton
                               size='xs'
