@@ -61,11 +61,11 @@ const NavMobile = ({ onClose, isOpen }) => {
                </Link>
                <Link as={ReachLink} to='/servicios' onClick={onClose}>
                   <Button
-                    textDecor='underline'
-                    bgColor='transparent'
-                    variant='link'
-                    color='blanco'
-                    fontSize='2xl'
+                     textDecor='underline'
+                     bgColor='transparent'
+                     variant='link'
+                     color='blanco'
+                     fontSize='2xl'
                      aria-label='Ir a la sección Servicios'
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
@@ -89,13 +89,13 @@ const NavMobile = ({ onClose, isOpen }) => {
                   </Button>
                </Link>
 
-               <Link as='a' href='#contact' onClick={onClose}>
+               <Link as={ReachLink} to='/contacto' onClick={onClose}>
                   <Button
-                   textDecor='underline'
-                   bgColor='transparent'
-                   variant='link'
-                   color='blanco'
-                   fontSize='2xl'
+                     textDecor='underline'
+                     bgColor='transparent'
+                     variant='link'
+                     color='blanco'
+                     fontSize='2xl'
                      aria-label='Ir a la sección Contacto'
                      textUnderlineOffset={4}
                      textDecorationColor='azul'

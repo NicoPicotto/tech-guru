@@ -1,15 +1,23 @@
-import { Stack, Button, Text, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+   Stack,
+   Button,
+   useMediaQuery,
+   Heading,
+   SimpleGrid,
+} from "@chakra-ui/react";
 import { FaDownload } from "react-icons/fa6";
 
 const Politicas = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
-      <SimpleGrid columns={2} spacing={5} marginBlock='5rem'>
+      <SimpleGrid columns={isMobile ? 1 : 2} spacing={5} marginBlock='5rem'>
          <Stack
             bgColor='gray.100'
             padding={5}
             rounded='lg'
             shadow='sm'
-            direction='row'
+            direction={isMobile ? "column" : "row"}
             justify='space-between'
          >
             <Heading size='md' maxW='30ch'>
@@ -30,7 +38,7 @@ const Politicas = () => {
             paddingInline={8}
             rounded='lg'
             shadow='sm'
-            direction='row'
+            direction={isMobile ? "column" : "row"}
             justify='space-between'
          >
             {" "}

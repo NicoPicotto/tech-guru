@@ -1,8 +1,10 @@
-import { Stack, Heading, Text } from "@chakra-ui/react";
+import { Stack, Heading, Text, useMediaQuery } from "@chakra-ui/react";
 import { useState } from "react";
 
 const Principios = () => {
    const [hoveredIndex, setHoveredIndex] = useState(null);
+
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
 
    const principios = [
       {
@@ -42,7 +44,7 @@ const Principios = () => {
       >
          {principios.map((p, index) => (
             <Stack
-               direction='row'
+               direction={isMobile ? "column" : "row"}
                key={p.title}
                index={index}
                borderBottom='1px solid'

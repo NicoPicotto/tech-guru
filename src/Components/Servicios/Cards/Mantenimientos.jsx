@@ -7,11 +7,14 @@ import {
    Divider,
    Button,
    Link,
+   useMediaQuery,
 } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
 import { FaCheck, FaWindowClose } from "react-icons/fa";
 
 const Mantenimientos = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
       <Stack
          gap={0}
@@ -22,8 +25,8 @@ const Mantenimientos = () => {
          shadow='sm'
          mb='4rem'
       >
-         <Stack direction='row'>
-            <Heading minW='60%'>
+         <Stack direction={isMobile ? "column" : "row"}>
+            <Heading minW='60%' size={isMobile ? "lg" : "xl"}>
                ¿Cuál es la modalidad de Soporte Técnico más conveniente para su
                laboratorio?
             </Heading>
@@ -41,7 +44,7 @@ const Mantenimientos = () => {
             </Stack>
          </Stack>
          <Divider borderColor='gray.400' marginBlock={10} />
-         <SimpleGrid columns={2} spacing={10}>
+         <SimpleGrid columns={isMobile ? 1 : 2} spacing={10}>
             <Stack
                bgColor='gray.200'
                paddingBlock={5}
@@ -181,7 +184,7 @@ const Mantenimientos = () => {
                         prefillMessage: `Hola! Estoy interesado en el mantenimiento Per Incident, ¿Podrían ponerse en contacto conmigo?`,
                      }}
                   >
-                     <Button w='100%'>
+                     <Button w='100%' whiteSpace={isMobile && "wrap"} p={isMobile && 8}>
                         Contactarme por este mantenimiento
                      </Button>
                   </Link>
@@ -326,7 +329,7 @@ const Mantenimientos = () => {
                         prefillMessage: `Hola! Estoy interesado en el mantenimiento por Contrato, ¿Podrían ponerse en contacto conmigo?`,
                      }}
                   >
-                     <Button w='100%'>
+                     <Button w='100%' whiteSpace={isMobile && "wrap"} p={isMobile && 8}>
                         Contactarme por este mantenimiento
                      </Button>
                   </Link>

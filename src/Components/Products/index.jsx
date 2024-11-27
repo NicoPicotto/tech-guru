@@ -1,20 +1,29 @@
-import { Stack, Heading, SimpleGrid, Text, Divider } from "@chakra-ui/react";
+import {
+   Stack,
+   Heading,
+   SimpleGrid,
+   Text,
+   Divider,
+   useMediaQuery,
+} from "@chakra-ui/react";
 import products from "./products";
 import ProductCard from "./ProductCard";
 
 const ProductList = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
       <Stack paddingBlock='5rem' gap='5rem'>
          <Stack
-            direction='row'
+            direction={isMobile ? "column" : "row"}
             position='relative'
             justify='space-between'
             gap='2rem'
             id='equipos'
          >
             <Stack
-               w='40%'
-               position='sticky'
+               w={isMobile ? "100%" : "40%"}
+               position={isMobile ? "static" : "sticky"}
                top='8rem'
                h='fit-content'
                bgColor='primario'
@@ -35,21 +44,25 @@ const ProductList = () => {
                   costo más accesible.
                </Text>
             </Stack>
-            <SimpleGrid w='60%' columns={2} spacing={10}>
+            <SimpleGrid
+               w={isMobile ? "100%" : "60%"}
+               columns={isMobile ? 1 : 2}
+               spacing={10}
+            >
                {products.map((product) => (
                   <ProductCard key={product.id} product={product} />
                ))}
             </SimpleGrid>
          </Stack>
          <Stack
-            direction='row'
+            direction={isMobile ? "column" : "row"}
             position='relative'
             justify='space-between'
             gap='2rem'
          >
             <Stack
-               w='40%'
-               position='sticky'
+               w={isMobile ? "100%" : "40%"}
+               position={isMobile ? "static" : "sticky"}
                top='8rem'
                h='fit-content'
                id='repuestos'
@@ -71,7 +84,11 @@ const ProductList = () => {
                   costo más accesible.
                </Text>
             </Stack>
-            <SimpleGrid w='60%' columns={2} spacing={10}>
+            <SimpleGrid
+               w={isMobile ? "100%" : "60%"}
+               columns={isMobile ? 1 : 2}
+               spacing={10}
+            >
                {products.map((product) => (
                   <ProductCard key={product.id} product={product} />
                ))}

@@ -5,10 +5,14 @@ import {
    SimpleGrid,
    Icon,
    Divider,
+   useMediaQuery
 } from "@chakra-ui/react";
 import { FaCheck, FaBinoculars, FaPaperPlane } from "react-icons/fa";
 
 const Mision = () => {
+
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    const valores = [
       {
          titulo: "Compromiso",
@@ -28,7 +32,7 @@ const Mision = () => {
    ];
 
    return (
-      <SimpleGrid columns={3} spacing={5} marginBottom='4rem'>
+      <SimpleGrid columns={isMobile ? 1 : 3} spacing={5} marginBottom='4rem'>
          {valores.map((v) => (
             <Stack
                bgColor='gray.100'

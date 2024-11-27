@@ -1,12 +1,21 @@
-import { Stack, Heading, Text, SimpleGrid, Image } from "@chakra-ui/react";
+import {
+   Stack,
+   Heading,
+   Text,
+   SimpleGrid,
+   Image,
+   useMediaQuery,
+} from "@chakra-ui/react";
 import heroServices from "/assets/QuienesSomos/quienes-1.jpg";
 
 const HeroQuienesSomos = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
       <Stack paddingBottom='4rem' paddingTop='0'>
-         <SimpleGrid columns={2} spacing={10}>
+         <SimpleGrid columns={isMobile ? 1 : 2} spacing={10}>
             <Stack gap={5} justify='center'>
-               <Heading size='2xl'>
+               <Heading size={isMobile ? "xl" : "2xl"}>
                   Expertos en Servicio Técnico de Instrumentación Analítica
                </Heading>
                <Text fontSize='lg'>
@@ -16,7 +25,7 @@ const HeroQuienesSomos = () => {
                   Technologies**
                </Text>
             </Stack>
-            <Stack align='end'>
+            <Stack align='end' display={isMobile && "none"}>
                <Image
                   src={heroServices}
                   maxW='80%'

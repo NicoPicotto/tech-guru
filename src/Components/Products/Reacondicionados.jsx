@@ -1,8 +1,17 @@
-import { Stack, Text, Heading, Icon, StackDivider } from "@chakra-ui/react";
+import {
+   Stack,
+   Text,
+   Heading,
+   Icon,
+   StackDivider,
+   useMediaQuery,
+} from "@chakra-ui/react";
 import "./reacondicionados.css";
 import { FaCheck } from "react-icons/fa";
 
 const Reacondicionados = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
       <>
          <Stack
@@ -15,13 +24,13 @@ const Reacondicionados = () => {
             marginBottom='4rem'
          >
             <Stack
-               direction='row'
+               direction={isMobile ? "column" : "row"}
                justify='space-between'
-               align='center'
+               align={isMobile ? "left" : "center"}
                gap='2rem'
                divider={<StackDivider borderColor='gray.300' />}
             >
-               <Stack gap={4} w='60%'>
+               <Stack gap={4} w={isMobile ? "100%" : "60%"}>
                   <Heading>¿Por qué comprar equipos reacondicionados?</Heading>
                   <Text>
                      {" "}
@@ -35,7 +44,7 @@ const Reacondicionados = () => {
                      electrónicos generados.
                   </Text>
                </Stack>
-               <Stack gap={4} w='40%'>
+               <Stack gap={4} w={isMobile ? "100%" : "40%"}>
                   <Stack direction='row'>
                      <Icon as={FaCheck} color='secundario' />
                      <Text>Cuentan con garantía.</Text>

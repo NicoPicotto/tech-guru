@@ -13,9 +13,11 @@ const MarqueeLogos = ({ bgColor }) => {
       { src: "/assets/Clients/zoovet.png", alt: "Bayer" },
    ];
    return (
-      <Stack align='center' paddingInline='2rem' marginBottom="2rem">
+      <Stack align='center' paddingInline='2rem' marginBottom='2rem'>
          <Stack maxW='80rem' w='100%' gap='1.5rem' paddingBlock='5rem'>
-            <Heading mb={5} textAlign='center'>Confían en nosotros </Heading>
+            <Heading mb={5} textAlign='center'>
+               Confían en nosotros{" "}
+            </Heading>
             <Stack overflow='hidden' maxW='80rem' w='100%' position='relative'>
                <Box
                   position='absolute'
@@ -39,7 +41,7 @@ const MarqueeLogos = ({ bgColor }) => {
                   }, transparent)`}
                   zIndex={1}
                />
-               <Marquee velocity={50}>
+               <Marquee velocity={isMobile ? 25 : 50}>
                   {logos.map((logo) => (
                      <Stack key={logo.alt} marginInline='2.5rem'>
                         <Image

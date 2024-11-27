@@ -10,11 +10,14 @@ import {
    Input,
    Textarea,
    Spinner,
+   useMediaQuery,
 } from "@chakra-ui/react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { useLocation } from "react-router-dom";
 
 const ContactForm = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    const [isSubmitting, setIsSubmitting] = useState(false);
    const [isSubmitted, setIsSubmitted] = useState(false);
    const [isError, setIsError] = useState(false);
@@ -66,7 +69,7 @@ const ContactForm = () => {
 
    return (
       <Stack paddingBottom='4rem'>
-         <SimpleGrid columns={2} spacing={10}>
+         <SimpleGrid columns={isMobile ? 1 : 2} spacing={10}>
             <Stack gap={5} justify='start'>
                <Heading size='2xl'>
                   Contáctenos y nuestros especialistas le brindarán la mejor
@@ -83,7 +86,7 @@ const ContactForm = () => {
             </Stack>
 
             <Stack as='form' onSubmit={handleSubmit}>
-               <SimpleGrid columns={2} spacing={3}>
+               <SimpleGrid columns={isMobile ? 1 : 2} spacing={3}>
                   <FormControl>
                      <FormLabel fontSize='sm'>Nombre y apellido</FormLabel>
                      <Input

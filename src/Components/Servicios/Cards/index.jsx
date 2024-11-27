@@ -5,6 +5,7 @@ import {
    Divider,
    Icon,
    SimpleGrid,
+   useMediaQuery,
 } from "@chakra-ui/react";
 import { FaGear } from "react-icons/fa6";
 import { FaCheckCircle, FaTools } from "react-icons/fa";
@@ -12,6 +13,8 @@ import { RiEqualizerFill } from "react-icons/ri";
 import { IoChatbubbleEllipses } from "react-icons/io5";
 
 const CardsServicios = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    const servicios = [
       {
          title: "Mantenimiento Preventivo",
@@ -47,7 +50,7 @@ const CardsServicios = () => {
 
    return (
       <Stack>
-         <SimpleGrid columns={5} spacing={5}>
+         <SimpleGrid columns={isMobile ? 1 : 5} spacing={5}>
             {servicios.map((service) => (
                <Stack
                   key={service.title}
