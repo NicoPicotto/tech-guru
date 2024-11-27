@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, useMediaQuery } from "@chakra-ui/react";
 import { useEffect } from "react";
 import theme from "./theme/theme";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -16,6 +16,8 @@ import ClientesView from "./Views/Clientes/ClientesView";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    useEffect(() => {
       const lenis = new Lenis();
 
@@ -29,35 +31,37 @@ function App() {
 
    return (
       <ChakraProvider theme={theme}>
-         <AnimatedCursor
-            innerSize={8}
-            className="custom-cursor"
-            outerSize={8}
-            color='0, 118, 180'
-            showSystemCursor={false}
-            outerAlpha={0.2}
-            innerScale={0.7}
-            outerScale={5}
-            hasBlendMode={true}
-            style={{ zIndex: 9999 }}
-            clickables={[
-               "a",
-               "h1",
-               "h2",
-               "h3",
-               "h4",
-               'input[type="text"]',
-               'input[type="email"]',
-               'input[type="number"]',
-               'input[type="submit"]',
-               'input[type="image"]',
-               "label[for]",
-               "select",
-               "textarea",
-               "button",
-               ".link",
-            ]}
-         />
+         {isMobile ? null : (
+            <AnimatedCursor
+               innerSize={8}
+               outerSize={8}
+               color='0, 118, 180'
+               showSystemCursor={false}
+               outerAlpha={0.2}
+               innerScale={0.7}
+               outerScale={5}
+               hasBlendMode={true}
+               style={{ zIndex: 9999 }}
+               clickables={[
+                  "a",
+                  "h1",
+                  "h2",
+                  "h3",
+                  "h4",
+                  'input[type="text"]',
+                  'input[type="email"]',
+                  'input[type="number"]',
+                  'input[type="submit"]',
+                  'input[type="image"]',
+                  "label[for]",
+                  "select",
+                  "textarea",
+                  "button",
+                  ".link",
+               ]}
+            />
+         )}
+
          <Router>
             <ScrollToTop />
             <Navbar />
