@@ -15,7 +15,7 @@ const NavMobile = ({ onClose, isOpen }) => {
    return (
       <Drawer onClose={onClose} isOpen={isOpen} size='full'>
          <DrawerOverlay />
-         <DrawerContent bgColor='negroOscuro'>
+         <DrawerContent bgColor='primarioDarker'>
             <DrawerCloseButton
                color='blanco'
                fontSize='1rem'
@@ -34,8 +34,10 @@ const NavMobile = ({ onClose, isOpen }) => {
                <Link as={ReachLink} to='/' onClick={onClose}>
                   <Button
                      textDecor='underline'
+                     bgColor='transparent'
                      variant='link'
-                     fontSize='xl'
+                     color='blanco'
+                     fontSize='2xl'
                      aria-label='Ir a la sección Inicio'
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
@@ -43,23 +45,27 @@ const NavMobile = ({ onClose, isOpen }) => {
                      Inicio
                   </Button>
                </Link>
-               <Link as={ReachLink} to='/nosotros' onClick={onClose}>
+               <Link as={ReachLink} to='/quienes-somos' onClick={onClose}>
                   <Button
                      textDecor='underline'
+                     bgColor='transparent'
                      variant='link'
-                     fontSize='xl'
-                     aria-label='Ir a la sección Nosotros'
+                     color='blanco'
+                     fontSize='2xl'
+                     aria-label='Ir a la sección Quienes Somos'
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
                   >
-                     Nosotros
+                     Quienes Somos
                   </Button>
                </Link>
                <Link as={ReachLink} to='/servicios' onClick={onClose}>
                   <Button
-                     textDecor='underline'
-                     variant='link'
-                     fontSize='xl'
+                    textDecor='underline'
+                    bgColor='transparent'
+                    variant='link'
+                    color='blanco'
+                    fontSize='2xl'
                      aria-label='Ir a la sección Servicios'
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
@@ -68,25 +74,29 @@ const NavMobile = ({ onClose, isOpen }) => {
                   </Button>
                </Link>
 
-               <Link as={ReachLink} to='/faq' onClick={onClose}>
+               <Link as={ReachLink} to='/productos' onClick={onClose}>
                   <Button
                      textDecor='underline'
+                     bgColor='transparent'
                      variant='link'
-                     fontSize='xl'
-                     aria-label='Ir a la sección Preguntas Frecuentes'
+                     color='blanco'
+                     fontSize='2xl'
+                     aria-label='Ir a la sección Productos'
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
                   >
-                     Preguntas Frecuentes
+                     Productos
                   </Button>
                </Link>
 
                <Link as='a' href='#contact' onClick={onClose}>
                   <Button
-                     textDecor='underline'
-                     variant='link'
-                     fontSize='xl'
-                     aria-label='Ir a la sección Contactarse'
+                   textDecor='underline'
+                   bgColor='transparent'
+                   variant='link'
+                   color='blanco'
+                   fontSize='2xl'
+                     aria-label='Ir a la sección Contacto'
                      textUnderlineOffset={4}
                      textDecorationColor='azul'
                   >

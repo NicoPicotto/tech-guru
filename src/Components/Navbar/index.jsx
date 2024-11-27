@@ -14,7 +14,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 
 const Navbar = () => {
    const { isOpen, onOpen, onClose } = useDisclosure();
-   const [isMobile] = useMediaQuery("(max-width: 900px)");
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
 
    return (
       <Stack
@@ -40,7 +40,7 @@ const Navbar = () => {
             <Stack>
                <Link as={ReachLink} to='/'>
                   <Image
-                     w={isMobile ? "2.5rem" : "5rem"}
+                     w={isMobile ? "4rem" : "5rem"}
                      src={logo}
                      filter='brightness(10)'
                      alt='Logo de Conectar'
@@ -126,6 +126,7 @@ const Navbar = () => {
                   fontSize='1.5rem'
                   onClick={onOpen}
                   bgColor='transparent'
+                  color="blanco"
                   _hover={{ bgColor: "transparent" }}
                />
             )}
