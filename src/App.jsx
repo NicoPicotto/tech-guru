@@ -31,6 +31,7 @@ function App() {
       <ChakraProvider theme={theme}>
          <AnimatedCursor
             innerSize={8}
+            className="custom-cursor"
             outerSize={8}
             color='0, 118, 180'
             showSystemCursor={false}

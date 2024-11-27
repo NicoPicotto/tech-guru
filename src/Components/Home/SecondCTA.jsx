@@ -52,6 +52,7 @@ const SecondCTA = () => {
                left={10}
                maxW='70ch'
                zIndex='2'
+               p={isMobile && 2}
             >
                <Heading size={isMobile ? "xl" : "2xl"} color='white'>
                   Sostenibilidad Ambiental
