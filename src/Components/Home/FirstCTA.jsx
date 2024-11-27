@@ -6,17 +6,27 @@ import {
    Button,
    Image,
    Box,
+   useMediaQuery,
 } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
 import agilentHome from "/assets/Home/agilentHome.jpg";
 
 const FirstCTA = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
       <Stack paddingTop='0'>
-         <Stack position='relative' rounded='lg' overflow='hidden'>
+         <Stack
+            position='relative'
+            rounded='lg'
+            overflow='hidden'
+            bgColor={isMobile ? "primarioDarker" : "inherit"}
+            p={isMobile ? "1rem" : "0"}
+         >
             {/* Gradiente en overlay */}
             <Box
                position='absolute'
+               display={isMobile && "none"}
                top='0'
                left='0'
                width='100%'
@@ -26,8 +36,9 @@ const FirstCTA = () => {
             />
             <Image
                src={agilentHome}
-               aspectRatio={16 / 9}
-               maxH='30rem'
+               aspectRatio={isMobile ? "auto" : 16 / 9}
+               display={isMobile && "none"}
+               maxH={isMobile ? "auto" : "30rem"}
                alt='hero home'
                objectFit='cover'
                position='relative'
@@ -36,17 +47,17 @@ const FirstCTA = () => {
             <Stack
                gap={5}
                justify='center'
-               position='absolute'
+               position={isMobile ? "static" : "absolute"}
                bottom={10}
                right={10}
                align='end'
                maxW='70ch'
                zIndex='2'
             >
-               <Heading size='2xl' color='white' textAlign="right">
+               <Heading size={isMobile ? "xl" : "2xl"} color='white' textAlign='right'>
                   Servicio Técnico Agilent ®*
                </Heading>
-               <Text fontSize='lg' color='white'  textAlign="right" maxW='60ch'>
+               <Text fontSize='lg' color='white' textAlign='right' maxW='60ch'>
                   En Tech Guru ofrecemos un paquete de servicios completo para
                   que puedas trabajar de forma continua y sin contratiempos y
                   hacer que cada proceso sea más eficiente. Para ello, hemos

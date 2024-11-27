@@ -7,6 +7,7 @@ import {
    Heading,
    Button,
    IconButton,
+   useMediaQuery,
 } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
 import Container from "../Commons/Container/Container";
@@ -16,12 +17,18 @@ import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
       <Stack bgColor='primarioDarker'>
          <Container>
             <Stack paddingTop='2rem'>
-               <Stack justify='space-between' direction='row'>
-                  <Link as={ReachLink} to='/'>
+               <Stack
+                  justify='space-between'
+                  direction={isMobile ? "column" : "row"}
+                  gap={isMobile && "2rem"}
+               >
+                  <Link as={ReachLink} to='/' display={isMobile && "none"}>
                      <Image
                         src={logo}
                         filter='brightness(10)'
@@ -29,7 +36,10 @@ const Footer = () => {
                         h='100px'
                      />
                   </Link>
-                  <Stack direction='row' gap={20}>
+                  <Stack
+                     direction={isMobile ? "column" : "row"}
+                     gap={isMobile ? "2rem" : 20}
+                  >
                      <Stack>
                         <Heading size='md' color='white'>
                            Sitio
@@ -135,7 +145,7 @@ const Footer = () => {
                   </Stack>
                </Stack>
                <Divider marginBlock={4} />
-               <Stack justify='space-between' direction='row'>
+               <Stack justify='space-between' direction={isMobile ? "column" : "row"}>
                   <Stack gap={0}>
                      <Text color='blanco' fontSize='xs' maxW='80ch'>
                         *Tech Guru S.A. no está vinculada a Hewelett-Packard

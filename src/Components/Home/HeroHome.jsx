@@ -6,17 +6,27 @@ import {
    Image,
    Button,
    Link,
+   useMediaQuery,
 } from "@chakra-ui/react";
 import heroServices from "/assets/Home/hero-img.jpg";
 import { Link as ReachLink } from "react-router-dom";
 
 const HeroHome = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
       <Stack paddingTop='0'>
-         <Stack position='relative' rounded='lg' overflow='hidden'>
+         <Stack
+            position='relative'
+            rounded='lg'
+            overflow='hidden'
+            bgColor={isMobile ? "primarioDarker" : "inherit"}
+            p={isMobile ? "1rem" : "0"}
+         >
             {/* Gradiente en overlay */}
             <Box
                position='absolute'
+               display={isMobile && "none"}
                top='0'
                left='0'
                width='100%'
@@ -26,8 +36,9 @@ const HeroHome = () => {
             />
             <Image
                src={heroServices}
-               aspectRatio={16 / 9}
-               maxH='30rem'
+               aspectRatio={isMobile ? "auto" : 16 / 9}
+               display={isMobile && "none"}
+               maxH={isMobile ? "auto" : "30rem"}
                alt='hero home'
                objectFit='cover'
                position='relative'
@@ -36,13 +47,13 @@ const HeroHome = () => {
             <Stack
                gap={5}
                justify='center'
-               position='absolute'
+               position={isMobile ? "static" : "absolute"}
                bottom={10}
                left={10}
                maxW='70ch'
                zIndex='2'
             >
-               <Heading size='2xl' color='white'>
+               <Heading size={isMobile ? "xl" : "2xl"} color='white'>
                   Servicio Técnico para Instrumental Analitico
                </Heading>
                <Text fontSize='lg' color='white' maxW='60ch'>
@@ -52,7 +63,7 @@ const HeroHome = () => {
                   su coordinación y compatibilidad general y mantenimiento
                   sostenible.
                </Text>
-               <Stack direction='row'>
+               <Stack direction={isMobile ? "column" : "row"}>
                   <Link as={ReachLink} to='/servicios'>
                      <Button
                         aria-label='Ir a la sección Contacto'

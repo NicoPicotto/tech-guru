@@ -26,7 +26,7 @@ const ContactForm = () => {
       const formData = new FormData(event.target);
 
       try {
-         const response = await fetch("https://conectar-gd.com/sendEmail.php", {
+         const response = await fetch("https://techguru.com.ar/sendEmail.php", {
             method: "POST",
             body: formData,
             mode: "cors",

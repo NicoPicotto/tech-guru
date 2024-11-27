@@ -6,16 +6,27 @@ import {
    Button,
    Image,
    Box,
+   useMediaQuery,
 } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
 import sostenibilidadHome from "/assets/Home/sostenibilidadHome.jpg";
+
 const SecondCTA = () => {
+   const [isMobile] = useMediaQuery("(max-width: 1100px)");
+
    return (
-      <Stack paddingTop='0' marginBottom="2rem">
-         <Stack position='relative' rounded='lg' overflow='hidden'>
+      <Stack paddingTop='0' marginBottom='2rem'>
+         <Stack
+            position='relative'
+            rounded='lg'
+            overflow='hidden'
+            bgColor={isMobile ? "primarioDarker" : "inherit"}
+            p={isMobile ? "1rem" : "0"}
+         >
             {/* Gradiente en overlay */}
             <Box
                position='absolute'
+               display={isMobile && "none"}
                top='0'
                left='0'
                width='100%'
@@ -25,8 +36,9 @@ const SecondCTA = () => {
             />
             <Image
                src={sostenibilidadHome}
-               aspectRatio={16 / 9}
-               maxH='30rem'
+               aspectRatio={isMobile ? "auto" : 16 / 9}
+               display={isMobile && "none"}
+               maxH={isMobile ? "auto" : "30rem"}
                alt='hero home'
                objectFit='cover'
                position='relative'
@@ -35,13 +47,13 @@ const SecondCTA = () => {
             <Stack
                gap={5}
                justify='center'
-               position='absolute'
+               position={isMobile ? "static" : "absolute"}
                bottom={10}
                left={10}
                maxW='70ch'
                zIndex='2'
             >
-               <Heading size='2xl' color='white'>
+               <Heading size={isMobile ? "xl" : "2xl"} color='white'>
                   Sostenibilidad Ambiental
                </Heading>
                <Text fontSize='lg' color='white' maxW='55ch'>

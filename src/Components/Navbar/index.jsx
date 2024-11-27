@@ -43,7 +43,7 @@ const Navbar = () => {
                      w={isMobile ? "4rem" : "5rem"}
                      src={logo}
                      filter='brightness(10)'
-                     alt='Logo de Conectar'
+                     alt='Logo de TechGuru'
                   />
                </Link>
             </Stack>
@@ -126,7 +126,7 @@ const Navbar = () => {
                   fontSize='1.5rem'
                   onClick={onOpen}
                   bgColor='transparent'
-                  color="blanco"
+                  color='blanco'
                   _hover={{ bgColor: "transparent" }}
                />
             )}
