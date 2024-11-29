@@ -6,9 +6,13 @@ import {
    StackDivider,
    useMediaQuery,
    SimpleGrid,
+   Link,
+   Button,
 } from "@chakra-ui/react";
+import { Link as ReachLink } from "react-router-dom";
 import "./reacondicionados.css";
 import { FaCheck } from "react-icons/fa";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Alquiler = () => {
    const [isMobile] = useMediaQuery("(max-width: 1100px)");
@@ -32,14 +36,40 @@ const Alquiler = () => {
                gap='2rem'
                divider={<StackDivider borderColor='gray.300' />}
             >
-               <Stack gap={4}>
-                  <Heading>Alquiler de equipos</Heading>
-                  <Text>
-                     {" "}
-                     Alquilar equipos de laboratorio ofrece varias ventajas
-                     tanto para empresas como instituciones educativas.
-                  </Text>
+               <Stack
+                  direction={isMobile ? "column" : "row"}
+                  justify='space-between'
+               >
+                  <Stack gap={4}>
+                     <Heading>Alquiler de equipos</Heading>
+                     <Text>
+                        {" "}
+                        Alquilar equipos de laboratorio ofrece varias ventajas
+                        tanto para empresas como instituciones educativas.
+                     </Text>
+                  </Stack>
+                  <Link
+                     as={ReachLink}
+                     to='/contacto'
+                     state={{
+                        prefillMessage: `¡Hola! Estoy interesado en el servicio de alquiler de equipos, ¿Podrían ponerse en contacto conmigo?`,
+                     }}
+                  >
+                     <Button
+                        rightIcon={
+                           <IoIosArrowRoundForward
+                              className='arrow'
+                              fontSize='1.2rem'
+                           />
+                        }
+                        variant='arrow'
+                        mt='2'
+                     >
+                        Hacé tu consulta
+                     </Button>
+                  </Link>
                </Stack>
+
                <SimpleGrid columns={isMobile ? 1 : 4} spacing={10}>
                   <Stack direction='row'>
                      <Icon as={FaCheck} color='secundario' />
