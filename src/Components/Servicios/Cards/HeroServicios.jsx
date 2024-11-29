@@ -18,7 +18,7 @@ const HeroServicios = () => {
                   situaciones que necesitas.
                </Text>
             </Stack>
-            <Stack align='end' display={isMobile && "none"}>
+            <Stack align='end' display={isMobile ? "none" : "flex"}>
                <Image
                   src={heroServices}
                   maxW='80%'

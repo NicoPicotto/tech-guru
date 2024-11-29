@@ -37,9 +37,9 @@ const Mantenimientos = () => {
                </Text>
                <Text fontSize='lg'>
                   Cada laboratorio tiene distintas necesidades. Conozca las
-                  diferencias entre la modalidad{" "}
-                  <Text as='i'>per incident</Text> (por evento), y los servicios
-                  que brindamos mediante Contratos de Soporte.
+                  diferencias entre la modalidad <Text as='i'>Standard</Text>{" "}
+                  (por evento), y los servicios que brindamos mediante Contratos
+                  de Soporte.
                </Text>
             </Stack>
          </Stack>
@@ -54,7 +54,7 @@ const Mantenimientos = () => {
                border='2px solid #0076b4'
             >
                <Heading size='lg' textAlign='center'>
-                  Per Incident
+                  Standard
                </Heading>
                <Divider borderColor='primario' marginBlock={2} />
                <Stack gap={3}>
@@ -181,10 +181,14 @@ const Mantenimientos = () => {
                      to='/contacto'
                      mt={5}
                      state={{
-                        prefillMessage: `Hola! Estoy interesado en el mantenimiento Per Incident, ¿Podrían ponerse en contacto conmigo?`,
+                        prefillMessage: `Hola! Estoy interesado en el mantenimiento Standard, ¿Podrían ponerse en contacto conmigo?`,
                      }}
                   >
-                     <Button w='100%' whiteSpace={isMobile && "wrap"} p={isMobile && 8}>
+                     <Button
+                        w='100%'
+                        whiteSpace={isMobile && "wrap"}
+                        p={isMobile && 8}
+                     >
                         Contactarme por este mantenimiento
                      </Button>
                   </Link>
@@ -329,7 +333,11 @@ const Mantenimientos = () => {
                         prefillMessage: `Hola! Estoy interesado en el mantenimiento por Contrato, ¿Podrían ponerse en contacto conmigo?`,
                      }}
                   >
-                     <Button w='100%' whiteSpace={isMobile && "wrap"} p={isMobile && 8}>
+                     <Button
+                        w='100%'
+                        whiteSpace={isMobile && "wrap"}
+                        p={isMobile && 8}
+                     >
                         Contactarme por este mantenimiento
                      </Button>
                   </Link>

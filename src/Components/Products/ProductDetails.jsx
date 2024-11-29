@@ -81,7 +81,7 @@ const ProductDetails = () => {
                as={ReachLink}
                to='/contacto'
                state={{
-                  prefillMessage: `Hola! Estoy interesado en el producto ${product.titulo}, ¿Podrían ponerse en contacto conmigo?`,
+                  prefillMessage: `¡Hola! Estoy interesado en el producto ${product.titulo}, ¿Podrían ponerse en contacto conmigo?`,
                }}
             >
                <Button mt={4}>Contactarme por este producto</Button>

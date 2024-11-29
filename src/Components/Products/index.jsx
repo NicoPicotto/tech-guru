@@ -5,9 +5,14 @@ import {
    Text,
    Divider,
    useMediaQuery,
+   Image,
+   Link,
+   Button,
 } from "@chakra-ui/react";
 import products from "./products";
 import ProductCard from "./ProductCard";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link as ReachLink } from "react-router-dom";
 
 const ProductList = () => {
    const [isMobile] = useMediaQuery("(max-width: 1100px)");
@@ -89,9 +94,43 @@ const ProductList = () => {
                columns={isMobile ? 1 : 2}
                spacing={10}
             >
-               {products.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-               ))}
+               <Stack
+                  rounded='lg'
+                  overflow='hidden'
+                  shadow='sm'
+                  bgColor='gray.100'
+                  transition='0.2s ease'
+               >
+                  <Image
+                     aspectRatio={1.5}
+                     src='./assets/Productos/repuestos.jpg'
+                     alt='Imagen de repuestos genericos'
+                  />
+                  <Stack p={5} justify='space-between' h='100%'>
+                     <Heading size='md'>Amplio stock de respuestos</Heading>
+                     {/* <Text>{product.descripcion}</Text> */}
+                     <Link
+                        as={ReachLink}
+                        to='/contacto'
+                        state={{
+                           prefillMessage: `¡Hola! Estoy interesado en un respuesto ¿Podrían ponerse en contacto conmigo?`,
+                        }}
+                     >
+                        <Button
+                           rightIcon={
+                              <IoIosArrowRoundForward
+                                 className='arrow'
+                                 fontSize='1.2rem'
+                              />
+                           }
+                           variant='arrow'
+                           mt='2'
+                        >
+                           Hacé tu consulta
+                        </Button>
+                     </Link>
+                  </Stack>
+               </Stack>
             </SimpleGrid>
          </Stack>
       </Stack>

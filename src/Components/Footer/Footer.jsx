@@ -118,7 +118,7 @@ const Footer = () => {
                            (0358) 155123456
                         </Text>
                         <Text color='blanco'>ventas@techguru.com.ar</Text>
-                        <Stack direction='row' align='center' gap={2}>
+                        {/* <Stack direction='row' align='center' gap={2}>
                            <IconButton
                               size='xs'
                               variant='ghost'
@@ -140,7 +140,7 @@ const Footer = () => {
                               as={IoLogoWhatsapp}
                               color='blanco'
                            />
-                        </Stack>
+                        </Stack> */}
                      </Stack>
                   </Stack>
                </Stack>

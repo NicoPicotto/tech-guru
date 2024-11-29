@@ -6,12 +6,11 @@ import {
    Link,
    SimpleGrid,
    Image,
-   useMediaQuery
+   useMediaQuery,
 } from "@chakra-ui/react";
 import heroServices from "/assets/Productos/hero-productos.jpg";
 
 const HeroProducts = () => {
-
    const [isMobile] = useMediaQuery("(max-width: 1100px)");
 
    return (
@@ -30,14 +29,14 @@ const HeroProducts = () => {
                   <Link as='a' href='#equipos'>
                      <Button>Equipos y repuestos reacondicionados</Button>
                   </Link>
-                  <Link as='a' href='#repuestos'>
+                  <Link as='a' href='#alquiler'>
                      <Button variant='outline'>
-                        Respuestos y consumibles originales
+                        Alquiler de equipos
                      </Button>
                   </Link>
                </Stack>
             </Stack>
-            <Stack align='end' display={isMobile && "none"}>
+            <Stack align='end' display={isMobile ? "none" : "flex"}>
                <Image
                   src={heroServices}
                   maxW='80%'

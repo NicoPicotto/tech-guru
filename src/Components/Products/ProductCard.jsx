@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Stack, Image, Text, Link, Heading, Button } from "@chakra-ui/react";
+import { Stack, Image,  Link, Heading, Button } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
