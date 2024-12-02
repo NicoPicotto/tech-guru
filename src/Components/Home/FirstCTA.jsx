@@ -51,7 +51,7 @@ const FirstCTA = () => {
                bottom={10}
                right={10}
                align={isMobile ? "start" : "end"}
-               maxW='70ch'
+               maxW='75ch'
                zIndex='2'
                p={isMobile && 2}
             >

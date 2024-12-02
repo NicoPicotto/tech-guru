@@ -82,8 +82,10 @@ const ProductList = () => {
                   Respuestos y consumibles originales{" "}
                </Heading>
                <Divider />
-               Contamos con una amplia gama de repuestos y consumibles
-               originales para su instrumental analítico
+               <Text color='blanco'>
+                  Contamos con una amplia gama de repuestos y consumibles
+                  originales para su instrumental analítico
+               </Text>
             </Stack>
             <SimpleGrid
                w={isMobile ? "100%" : "60%"}
