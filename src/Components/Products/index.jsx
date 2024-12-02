@@ -43,10 +43,8 @@ const ProductList = () => {
                </Heading>
                <Divider />
                <Text color='blanco'>
-                  Contamos con amplio stock de repuestos e instrumental
-                  analítico reacondicionados por nuestro personal técnico
-                  conservando la performance de un instrumental nuevo, pero a un
-                  costo más accesible.
+                  Contamos con una amplia gama de repuestos y consumibles
+                  originales para su instrumental analítico
                </Text>
             </Stack>
             <SimpleGrid
@@ -82,12 +80,12 @@ const ProductList = () => {
                   Respuestos y consumibles originales{" "}
                </Heading>
                <Divider />
-               <Text color='blanco'>
+               {/* <Text color='blanco'>
                   Contamos con amplio stock de repuestos e instrumental
                   analítico reacondicionados por nuestro personal técnico
                   conservando la performance de un instrumental nuevo, pero a un
                   costo más accesible.
-               </Text>
+               </Text> */}
             </Stack>
             <SimpleGrid
                w={isMobile ? "100%" : "60%"}

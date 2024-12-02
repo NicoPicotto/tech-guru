@@ -21,9 +21,7 @@ const HeroProducts = () => {
                   Mirá nuestra amplia variedad de productos y repuestos
                </Heading>
                <Text fontSize='lg'>
-                  Ofrecemos planes de alquiler de instrumental analítico con
-                  opción a compra y planes de compra directa con financiación,
-                  con una garantía extendida de diferentes duraciones.
+               Ofrecemos equipos y repuestos reacondicionados, como así también opciones de alquiler de instrumental analítico con  garantía y opción a compra.
                </Text>
                <Stack direction={isMobile ? "column" : "row"}>
                   <Link as='a' href='#equipos'>

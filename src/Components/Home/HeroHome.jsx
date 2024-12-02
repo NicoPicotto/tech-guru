@@ -58,11 +58,11 @@ const HeroHome = () => {
                   Servicio Técnico para Instrumental Analitico
                </Heading>
                <Text fontSize='lg' color='white' maxW='60ch'>
-                  Somos una empresa enfocada al mantenimiento, calificación y
-                  reparación de sistemas cromatográficos para laboratorios.
-                  Abordamos tanto software como hardware y nos especializamos en
-                  su coordinación y compatibilidad general y mantenimiento
-                  sostenible.
+                  Somos una empresa especializada en el mantenimiento,
+                  calificación operativa y reparación de sistemas
+                  cromatográficos para laboratorios. Abordamos tanto software
+                  como hardware, permitiendo a nuestros clientes producir
+                  resultados más precisos y confiables.
                </Text>
                <Stack direction={isMobile ? "column" : "row"}>
                   <Link as={ReachLink} to='/servicios'>

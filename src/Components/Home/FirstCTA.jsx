@@ -50,20 +50,27 @@ const FirstCTA = () => {
                position={isMobile ? "static" : "absolute"}
                bottom={10}
                right={10}
-               align={isMobile ? "start" : 'end'}
+               align={isMobile ? "start" : "end"}
                maxW='70ch'
                zIndex='2'
                p={isMobile && 2}
             >
-               <Heading size={isMobile ? "xl" : "2xl"} color='white' textAlign={isMobile ? "left" : "right"}>
+               <Heading
+                  size={isMobile ? "xl" : "2xl"}
+                  color='white'
+                  textAlign={isMobile ? "left" : "right"}
+               >
                   Servicio Técnico Agilent ®*
                </Heading>
-               <Text fontSize='lg' color='white' textAlign={isMobile ? "left" : "right"} maxW='60ch'>
-                  En Tech Guru ofrecemos un paquete de servicios completo para
-                  que puedas trabajar de forma continua y sin contratiempos y
-                  hacer que cada proceso sea más eficiente. Para ello, hemos
-                  organizado todos los servicios para que cubran todas las
-                  situaciones que necesitas.
+               <Text
+                  fontSize='lg'
+                  color='white'
+                  textAlign={isMobile ? "left" : "right"}
+                  maxW='60ch'
+               >
+                  En Tech Guru ofrecemos un paquete de servicios completos para
+                  que puedas trabajar de forma continua y sin contratiempos,
+                  haciendo que sus procesos sean más eficientes.
                </Text>
                <Stack direction='row'>
                   <Link as={ReachLink} to='/servicios'>

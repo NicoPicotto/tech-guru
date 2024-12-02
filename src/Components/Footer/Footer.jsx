@@ -29,12 +29,7 @@ const Footer = () => {
                   gap={isMobile && "2rem"}
                >
                   <Link as={ReachLink} to='/' display={isMobile && "none"}>
-                     <Image
-                        src={logo}
-                        filter='brightness(10)'
-                        alt='Logo de TechGuru'
-                        h='100px'
-                     />
+                     <Image src={logo} alt='Logo de TechGuru' h='100px' />
                   </Link>
                   <Stack
                      direction={isMobile ? "column" : "row"}
@@ -145,7 +140,10 @@ const Footer = () => {
                   </Stack>
                </Stack>
                <Divider marginBlock={4} />
-               <Stack justify='space-between' direction={isMobile ? "column" : "row"}>
+               <Stack
+                  justify='space-between'
+                  direction={isMobile ? "column" : "row"}
+               >
                   <Stack gap={0}>
                      <Text color='blanco' fontSize='xs' maxW='80ch'>
                         *Tech Guru S.A. no está vinculada a Hewelett-Packard

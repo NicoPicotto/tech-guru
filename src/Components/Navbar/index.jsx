@@ -42,7 +42,6 @@ const Navbar = () => {
                   <Image
                      w={isMobile ? "4rem" : "5rem"}
                      src={logo}
-                     filter='brightness(10)'
                      alt='Logo de TechGuru'
                   />
                </Link>
