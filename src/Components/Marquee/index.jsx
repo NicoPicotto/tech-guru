@@ -7,10 +7,12 @@ const MarqueeLogos = ({ bgColor }) => {
 
    const logos = [
       { src: "/assets/Clients/bayer.png", alt: "Bayer" },
-      { src: "/assets/Clients/richmond.png", alt: "Bayer" },
-      { src: "/assets/Clients/roche.png", alt: "Bayer" },
-      { src: "/assets/Clients/sgs.png", alt: "Bayer" },
-      { src: "/assets/Clients/zoovet.png", alt: "Bayer" },
+      { src: "/assets/Clients/richmond.png", alt: "Richmond" },
+      { src: "/assets/Clients/roche.png", alt: "Roche" },
+      { src: "/assets/Clients/sgs.png", alt: "SGS" },
+      { src: "/assets/Clients/ceva.png", alt: "CEVA" },
+      { src: "/assets/Clients/amspec.png", alt: "ASMPEC" },
+      { src: "/assets/Clients/over.png", alt: "OVER" },
    ];
    return (
       <Stack align='center' paddingInline='2rem' marginBottom='2rem'>

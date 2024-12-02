@@ -2,7 +2,7 @@ const products = [
    {
       id: 1,
       titulo:
-         "Sistema HPLC de 6 piezas Agilent HP 1100",
+         "Sistema HPLC Agilent 1100",
       descripcion: "",
       imagen: "/assets/Productos/agilent-1100.jpg",
       configuracion: [

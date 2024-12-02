@@ -189,7 +189,7 @@ const Mantenimientos = () => {
                         whiteSpace={isMobile && "wrap"}
                         p={isMobile && 8}
                      >
-                        Contactarme por este mantenimiento
+                        Contactarme por este servicio
                      </Button>
                   </Link>
                </Stack>
@@ -338,7 +338,7 @@ const Mantenimientos = () => {
                         whiteSpace={isMobile && "wrap"}
                         p={isMobile && 8}
                      >
-                        Contactarme por este mantenimiento
+                        Contactarme por este servicio
                      </Button>
                   </Link>
                </Stack>

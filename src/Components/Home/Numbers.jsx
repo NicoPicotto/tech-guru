@@ -40,7 +40,7 @@ const Numbers = () => {
       });
 
       gsap.to(mantenimientos, {
-         value: 500,
+         value: 2000,
          duration: 2,
          ease: "power2.out",
          onUpdate: () => {
@@ -76,9 +76,13 @@ const Numbers = () => {
 
    return (
       <Stack marginBlock='6rem'>
-         <SimpleGrid columns={isMobile ? 1 : 3} spacing={10} position='relative'>
+         <SimpleGrid
+            columns={isMobile ? 1 : 3}
+            spacing={10}
+            position='relative'
+         >
             <Stack
-               borderRight={isMobile ? "none" : '1px solid'}
+               borderRight={isMobile ? "none" : "1px solid"}
                borderColor='primarioDarker'
                align='center'
             >
@@ -117,7 +121,11 @@ const Numbers = () => {
                   MANTENIMIENTOS REALIZADOS
                </Text>
             </Stack>
-            <Stack align='center' borderLeft={isMobile ? "none" : '1px solid'} borderColor='primarioDarker'>
+            <Stack
+               align='center'
+               borderLeft={isMobile ? "none" : "1px solid"}
+               borderColor='primarioDarker'
+            >
                <Stack direction='row' align='center' justify='center'>
                   <Heading color='secundario' size='2xl'>
                      +
